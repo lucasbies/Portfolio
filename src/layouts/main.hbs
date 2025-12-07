@@ -37,17 +37,28 @@
     <meta name="theme-color" content="#9050E0">
 
     <title>{{#if meta.title}}{{meta.title}}{{else}}Portfolio — Lucas Bieszczad{{/if}}</title>
+    
+    <!-- ✅ CSS CRITIQUE INLINE (améliore FCP) -->
     <style>
-        /* CSS critique inline pour FCP */
-        :root{--primary:#9050E0;--text-dark:#2C3E50;--bg-white:#fff}
+        :root{--primary:#9050E0;--text-dark:#2C3E50;--bg-white:#fff;--bg-main:#F0F0F0}
         *{margin:0;padding:0;box-sizing:border-box}
-        body{font-family:'Montserrat',sans-serif;background:#F0F0F0}
-        .site-header{background:#fff;box-shadow:0 2px 12px rgba(0,0,0,.08);position:sticky;top:0;z-index:1000}
+        body{font-family:'Montserrat',sans-serif;background:var(--bg-main);line-height:1.6;color:var(--text-dark)}
+        .site-header{background:var(--bg-white);box-shadow:0 2px 12px rgba(0,0,0,.08);position:sticky;top:0;z-index:1000}
+        .hero-home{min-height:100vh;display:flex;align-items:center;justify-content:center}
     </style>
+    
+    <!-- ✅ PRELOAD CSS (charge async puis swap) -->
     <link rel="preload" href="assets/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="assets/style.css"></noscript>
-    <link rel="stylesheet" href="assets/style.css">
-    <script defer src="assets/script.js"></script>
+    
+    <!-- ✅ DEFER SCRIPT (exécute après HTML parsé) -->
+    <script src="assets/script.js" defer></script>
+
+    <!-- ✅ PRECONNECT FONTS (réduit latence DNS) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
 </head>
 <body>
     {{> header }}

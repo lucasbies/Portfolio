@@ -4079,23 +4079,3 @@ a.contact-link:hover {
     margin-top: 0.3rem;
 }
 
-/* Désactiver animations coûteuses sur mobile */
-@media (max-width: 768px) {
-    /* Réduire complexité animations */
-    * {
-        animation-duration: 0.2s !important;
-    }
-    
-    .hero-content,
-    .fade-in,
-    .slide-in-left,
-    .slide-in-right,
-    .scale-in {
-        animation: none;
-    }
-    
-    /* Simplifier transitions */
-    * {
-        transition-duration: 0.15s !important;
-    }
-}
