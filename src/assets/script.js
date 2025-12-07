@@ -178,30 +178,50 @@ function initCarousel() {
     startAutoplay();
 }
 
-// 3. FILTRES PROJETS
+// 3. FILTRES PROJETS (CORRECTION COMPLÈTE)
 function initProjectFilters() {
     const filterBtns = document.querySelectorAll('.filter-btn');
     const projectCards = document.querySelectorAll('[data-tags]');
+    
+    if (filterBtns.length === 0 || projectCards.length === 0) return;
     
     filterBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             const filter = btn.dataset.filter;
             
+            // 1️⃣ GESTION BOUTONS ACTIFS
             filterBtns.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
             
+            // 2️⃣ FILTRAGE AVEC TRANSITIONS FLUIDES
             projectCards.forEach(card => {
                 const tags = card.dataset.tags.split(' ');
                 const shouldShow = filter === 'all' || tags.includes(filter);
                 
-                if (shouldShow) {
-                    card.style.display = '';
-                    requestAnimationFrame(() => {
-                        card.style.opacity = '1';
-                    });
+                if (!shouldShow) {
+                    // Phase 1 : Animation de sortie
+                    card.classList.add('filtering-out');
+                    
+                    // Phase 2 : Masquage après transition
+                    setTimeout(() => {
+                        card.classList.add('hidden');
+                        card.classList.remove('filtering-out');
+                    }, 300);
+                    
                 } else {
-                    card.style.opacity = '0';
-                    setTimeout(() => card.style.display = 'none', 300);
+                    // Retirer masquage immédiatement
+                    card.classList.remove('hidden');
+                    
+                    // Phase 1 : Préparer animation d'entrée
+                    card.classList.add('filtering-in');
+                    
+                    // Phase 2 : Trigger reflow
+                    void card.offsetWidth;
+                    
+                    // Phase 3 : Animation d'entrée
+                    requestAnimationFrame(() => {
+                        card.classList.remove('filtering-in');
+                    });
                 }
             });
         });

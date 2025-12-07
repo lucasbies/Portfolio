@@ -38,11 +38,11 @@
 
     <title>Contact | Lucas Bieszczad - Gameplay Programmer</title>
     
-    <!-- ✅ PRELOAD FONTS CRITIQUES (charge IMMÉDIATEMENT) -->
+    <!-- ✅ PRELOAD FONTS CRITIQUES -->
     <link rel="preload" href="assets/fonts/montserrat-v31-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="assets/fonts/montserrat-v31-latin-700.woff2" as="font" type="font/woff2" crossorigin>
     
-    <!-- ✅ FONTS CSS INLINE (pas de requête HTTP supplémentaire) -->
+    <!-- ✅ FONTS CSS INLINE -->
     <style>
         /* MONTSERRAT SELF-HOSTED v31 */
         @font-face{font-display:swap;font-family:'Montserrat';font-style:normal;font-weight:300;src:url('assets/fonts/montserrat-v31-latin-300.woff2') format('woff2')}
@@ -53,18 +53,8 @@
         @font-face{font-display:swap;font-family:'Montserrat';font-style:normal;font-weight:800;src:url('assets/fonts/montserrat-v31-latin-800.woff2') format('woff2')}
     </style>
     
-    <!-- ✅ CSS CRITIQUE INLINE (améliore FCP) -->
-    <style>
-        :root{--primary:#9050E0;--text-dark:#2C3E50;--bg-white:#fff;--bg-main:#F0F0F0}
-        *{margin:0;padding:0;box-sizing:border-box}
-        body{font-family:'Montserrat',sans-serif;background:var(--bg-main);line-height:1.6;color:var(--text-dark)}
-        .site-header{background:var(--bg-white);box-shadow:0 2px 12px rgba(0,0,0,.08);position:sticky;top:0;z-index:1000}
-        .hero-home{min-height:100vh;display:flex;align-items:center;justify-content:center}
-    </style>
-    
-    <!-- ✅ PRELOAD CSS (charge async puis swap) -->
-    <link rel="preload" href="assets/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="assets/style.css"></noscript>
+    <!-- ✅ CSS PRINCIPAL BLOQUANT (élimine FOUC) -->
+    <link rel="stylesheet" href="assets/style.css">
     
     <!-- ✅ DEFER SCRIPT (exécute après HTML parsé) -->
     <script src="assets/script.js" defer></script>
@@ -229,6 +219,7 @@
                 <ul class="footer-links">
                     <li><a href="TransMontagne.html">Projet TransMontagne</a></li>
                     <li><a href="solitaire.html">Solitaire C++</a></li>
+                    <li><a href="OverRule.html">Over Rule (Unity)</a></li>
                     <li><a href="projets.html">Tous les projets →</a></li>
                 </ul>
             </div>

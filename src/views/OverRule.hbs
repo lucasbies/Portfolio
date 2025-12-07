@@ -1,0 +1,233 @@
+{{! filepath: c:\Users\Administrator\Desktop\Lucas\portfolio propre\src\views\OverRule.hbs }}
+<main class="project-detail">
+    <!-- Hero du projet -->
+    <section class="project-hero">
+        <div class="project-hero__content">
+            <span class="project-tag">Projet Académique • Unity Multiplayer</span>
+            <h1>Over Rule</h1>
+            <p class="project-subtitle">
+                Jeu multijoueur 2D en développement sur Unity avec synchronisation réseau via Netcode for GameObjects. 
+                Système de lobby, matchmaking et mécaniques de gameplay coopératif/compétitif.
+            </p>
+            
+            <div class="project-meta">
+                <div class="meta-item">
+                    <span class="meta-label">Durée</span>
+                    <span class="meta-value">En cours (6 mois prévus)</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Moteur</span>
+                    <span class="meta-value">Unity 2022 LTS</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Équipe</span>
+                    <span class="meta-value">5 personnes</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Rôle</span>
+                    <span class="meta-value">Gameplay Programmer + Networking</span>
+                </div>
+            </div>
+
+            <div class="project-actions">
+                <a href="https://github.com/lucasbies/OverRule" target="_blank" rel="noopener" class="btn btn-primary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    Voir sur GitHub
+                </a>
+                <a href="#breakdown" class="btn btn-secondary">
+                    📊 Breakdown technique
+                </a>
+            </div>
+        </div>
+
+        <div class="project-hero__media">
+            <img src="assets/OverRule.webp" 
+                 alt="Capture gameplay Over Rule avec HUD multijoueur" 
+                 class="project-thumbnail"
+                 loading="eager">
+        </div>
+    </section>
+
+    <!-- Vue d'ensemble -->
+    <section class="project-section">
+        <h2>Vue d'ensemble</h2>
+        <div class="overview-grid">
+            <div class="overview-card">
+                <h3>🎯 Objectif</h3>
+                <p>
+                    Créer un jeu multijoueur 2D fonctionnel avec synchronisation réseau fiable, 
+                    système de lobby/matchmaking et mécaniques de gameplay équilibrées.
+                </p>
+            </div>
+            <div class="overview-card">
+                <h3>🔧 Technologies</h3>
+                <ul class="tech-list">
+                    <li><strong>Unity 2022 LTS</strong> : Moteur de jeu</li>
+                    <li><strong>Netcode for GameObjects</strong> : Networking officiel Unity</li>
+                    <li><strong>C#</strong> : Scripting gameplay</li>
+                    <li><strong>Unity Services</strong> : Lobby & Relay (prévu)</li>
+                </ul>
+            </div>
+            <div class="overview-card">
+                <h3>📊 État actuel</h3>
+                <ul class="metrics-list">
+                    <li>🔧 Synchronisation joueurs : En cours</li>
+                    <li>🔧 Système de lobby : En développement</li>
+                    <li>✅ Mécaniques de base : Implémentées</li>
+                    <li>⏳ Tests réseau : Planifiés (Semestre 4)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Défis techniques (BREAKDOWN) -->
+    <section class="project-section" id="breakdown">
+        <h2>Défis techniques rencontrés</h2>
+        <div class="challenges-grid">
+            
+            <article class="challenge-card">
+                <div class="challenge-header">
+                    <span class="challenge-number">01</span>
+                    <h3>Synchronisation état de jeu</h3>
+                </div>
+                <div class="challenge-content">
+                    <p>
+                        Synchroniser les mouvements, actions et états des joueurs sur le réseau 
+                        sans lag perceptible ni désynchronisation.
+                    </p>
+                    <h4>Solution en cours</h4>
+                    <p>
+                        Utilisation de <strong>NetworkVariables</strong> pour état partagé, 
+                        <strong>ClientRPC</strong> pour événements visuels, et interpolation pour mouvements fluides.
+                    </p>
+                </div>
+            </article>
+
+            <article class="challenge-card">
+                <div class="challenge-header">
+                    <span class="challenge-number">02</span>
+                    <h3>Gestion lobby & matchmaking</h3>
+                </div>
+                <div class="challenge-content">
+                    <p>
+                        Créer un système de lobby permettant aux joueurs de rejoindre/quitter 
+                        une partie avant le début du match.
+                    </p>
+                    <h4>Solution prévue</h4>
+                    <p>
+                        Intégration <strong>Unity Lobby Service</strong> + <strong>Relay</strong> 
+                        pour hébergement sans serveur dédié (approche peer-to-peer sécurisée).
+                    </p>
+                </div>
+            </article>
+
+            <article class="challenge-card">
+                <div class="challenge-header">
+                    <span class="challenge-number">03</span>
+                    <h3>Équilibrage gameplay multijoueur</h3>
+                </div>
+                <div class="challenge-content">
+                    <p>
+                        Concevoir des mécaniques équitables en mode coopératif ET compétitif, 
+                        avec gestion des latences variables.
+                    </p>
+                    <h4>Approche adoptée</h4>
+                    <p>
+                        Phases de playtests régulières en équipe, ajustement des timings 
+                        et compensation lag côté serveur (prédiction client + réconciliation).
+                    </p>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- Compétences développées -->
+    <section class="project-section bg-dark">
+        <h2>Compétences développées</h2>
+        <div class="skills-acquired">
+            <div class="skill-category">
+                <h3>Moteur & Langages</h3>
+                <ul class="tags">
+                    <li class="tag">Unity 2022 LTS</li>
+                    <li class="tag">C# (POO avancée)</li>
+                    <li class="tag">Netcode for GameObjects</li>
+                    <li class="tag">Unity Services (Lobby/Relay)</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Systèmes & Architecture</h3>
+                <ul class="tags">
+                    <li class="tag">Client-Server Architecture</li>
+                    <li class="tag">State Synchronization</li>
+                    <li class="tag">RPC & Network Events</li>
+                    <li class="tag">Lag Compensation</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ce que ce projet m'apprend -->
+    <section class="project-section">
+        <h2>Ce que ce projet m'apprend</h2>
+        <div class="lessons-grid">
+            <div class="lesson-card">
+                <strong>Architecture réseau</strong>
+                <p>
+                    Comprendre les différences client/serveur et gérer la latence est fondamental 
+                    pour tout jeu multijoueur professionnel.
+                </p>
+            </div>
+
+            <div class="lesson-card">
+                <strong>Tests multiplayer</strong>
+                <p>
+                    Les bugs réseau sont 10× plus difficiles à debugger que les bugs solo. 
+                    L'automatisation des tests est critique.
+                </p>
+            </div>
+
+            <div class="lesson-card">
+                <strong>Travail d'équipe distribué</strong>
+                <p>
+                    Collaborer sur un projet networking nécessite une communication claire 
+                    et une documentation rigoureuse (APIs, protocoles).
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Autres projets -->
+    <section class="project-section">
+        <h2>Projets similaires</h2>
+        <div class="related-projects">
+            <a href="TransMontagne.html" class="related-card">
+                <img src="assets/Blocking.webp" alt="Blockout niveau TransMontagne" loading="lazy">
+                <h3>Trans Montagne</h3>
+                <p>Level Design • Unreal Engine 5 • Blueprint</p>
+            </a>
+            <a href="solitaire.html" class="related-card">
+                <img src="assets/Solitaire.webp" alt="Interface console Solitaire C++" loading="lazy">
+                <h3>Solitaire Console C++</h3>
+                <p>POO • C++ 17 • Logique de jeu</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- CTA final -->
+    <section class="project-cta">
+        <div class="cta-content">
+            <h2>Intéressé par mon profil ?</h2>
+            <p>
+                Je recherche un <strong>stage Gameplay Programmer</strong> de 6 mois (été 2026).
+                <br>Spécialisé en systèmes de combat, AI et networking multijoueur.
+            </p>
+            <div class="cta-actions">
+                <a href="contact.html" class="btn btn-primary">Me contacter</a>
+                <a href="projets.html" class="btn btn-secondary">Voir tous mes projets</a>
+            </div>
+        </div>
+    </section>
+</main>

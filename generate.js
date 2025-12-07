@@ -78,6 +78,17 @@ const pages = [
         }
     },
     {
+        template: 'OverRule.hbs',
+        output: 'OverRule.html',
+        meta: {
+            title: 'Over Rule | Lucas Bieszczad - Gameplay Programmer',
+            description: 'Over Rule : jeu multijoueur 2D Unity avec Netcode for GameObjects. Synchronisation réseau, lobby system et mécaniques coopératives. Projet académique équipe 5.',
+            url: 'https://lucasbies.github.io/Portfolio/OverRule.html',
+            image: 'https://lucasbies.github.io/Portfolio/assets/OverRule.webp',
+            type: 'article'
+        }
+    },
+    {
         template: 'contact.hbs',
         output: 'contact.html',
         meta: {

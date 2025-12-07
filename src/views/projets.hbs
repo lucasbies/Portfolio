@@ -1,3 +1,4 @@
+{{! filepath: c:\Users\Administrator\Desktop\Lucas\portfolio propre\src\views\projets.hbs }}
 <!-- Hero Projets -->
 <section class="projects-hero">
     <div class="projects-hero-content">
@@ -17,7 +18,7 @@
                     <rect x="3" y="14" width="7" height="7" rx="1" stroke="currentColor" stroke-width="2"/>
                     <rect x="14" y="14" width="7" height="7" rx="1" stroke="currentColor" stroke-width="2"/>
                 </svg>
-                Tous (4)
+                Tous (3)
             </button>
             <button class="filter-btn" data-filter="unreal">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
@@ -25,7 +26,14 @@
                     <path d="M2 17l10 5 10-5" stroke="currentColor" stroke-width="2"/>
                     <path d="M2 12l10 5 10-5" stroke="currentColor" stroke-width="2"/>
                 </svg>
-                Unreal Engine (3)
+                Unreal Engine (1)
+            </button>
+            <button class="filter-btn" data-filter="unity">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 2L2 7v10l10 5 10-5V7L12 2z" stroke="currentColor" stroke-width="2"/>
+                    <path d="M2 7l10 5m0 0l10-5m-10 5v10" stroke="currentColor" stroke-width="2"/>
+                </svg>
+                Unity (1)
             </button>
             <button class="filter-btn" data-filter="cpp">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
@@ -33,11 +41,12 @@
                 </svg>
                 C++ (1)
             </button>
-            <button class="filter-btn" data-filter="completed">
+            <button class="filter-btn" data-filter="wip">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                    <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2"/>
+                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                    <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2"/>
                 </svg>
-                Terminés (4)
+                En cours (1)
             </button>
         </div>
     </div>
@@ -48,7 +57,7 @@
     
     <div class="projects-grid-modern">
         
-        <!-- PROJET 1 : STEAMPUNK -->
+        <!-- PROJET 1 : TRANS MONTAGNE -->
         <article class="project-card" data-tags="unreal blueprint completed">
     <div class="project-status">
         <span class="status-badge completed">✓ Terminé</span>
@@ -227,19 +236,19 @@
 </article>
 
 
-        <!-- PROJET 3 : FANTASY QUEST -->
-        <article class="project-card" data-tags="unreal completed">
+        <!-- PROJET 3 : OVER RULE (NOUVEAU) -->
+        <article class="project-card" data-tags="unity csharp multiplayer wip">
             <div class="project-status">
-                <span class="status-badge completed">✓ Terminé</span>
+                <span class="status-badge wip">🔧 En cours</span>
             </div>
             
             <div class="project-media">
-                <img src="assets/img/fantasy_blockout.webp" 
-                     alt="Blockout Fantasy Quest avec puzzles environnementaux" 
+                <img src="assets/OverRule.webp" 
+                     alt="Capture jeu Over Rule - Multiplayer 2D Unity" 
                      loading="lazy">
                 <div class="media-overlay">
                     <div class="overlay-content">
-                        <a href="fantasy.html" class="btn-overlay-primary">
+                        <a href="OverRule.html" class="btn-overlay-primary">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                                 <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2"/>
                                 <path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="2"/>
@@ -253,120 +262,69 @@
             <div class="project-content">
                 <div class="project-header">
                     <div class="project-tags">
-                        <span class="tag tech">Unreal Engine</span>
-                        <span class="tag tech">Blueprint</span>
-                        <span class="tag role">Level Design</span>
+                        <span class="tag tech">Unity</span>
+                        <span class="tag tech">C#</span>
+                        <span class="tag tech">Netcode</span>
+                        <span class="tag role">Multiplayer</span>
                     </div>
                     <div class="project-meta-inline">
                         <span class="meta-chip">
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
                                 <path d="M8 1a7 7 0 100 14A7 7 0 008 1z"/>
                             </svg>
-                            4 semaines
+                            En développement
                         </span>
-                        <span class="meta-chip">Solo</span>
+                        <span class="meta-chip">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                <path d="M8 8a3 3 0 100-6 3 3 0 000 6zm2-3a2 2 0 11-4 0 2 2 0 014 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4z"/>
+                        </svg>
+                        Équipe 5
                     </div>
                 </div>
                 
                 <h2 class="project-title">
-                    <a href="fantasy.html">Fantasy Quest</a>
+                    <a href="OverRule.html">Over Rule</a>
                 </h2>
                 
                 <p class="project-description">
-                    Prototype d'exploration avec <strong>puzzles environnementaux</strong> et mécaniques d'interaction. 
-                    Focus sur le level design et la narration spatiale.
+                    Jeu multijoueur 2D en développement sous <strong>Unity</strong>. 
+                    Implémentation du <strong>networking</strong> avec Netcode for GameObjects, 
+                    synchronisation joueurs, et mécaniques de gameplay coopératif/compétitif.
                 </p>
                 
                 <div class="project-highlights">
                     <div class="highlight-item">
-                        <span class="highlight-label">Mécaniques</span>
-                        <span class="highlight-value">Puzzles • Interactions • Checkpoints</span>
+                        <span class="highlight-label">Rôle principal</span>
+                        <span class="highlight-value">Gameplay Programmer + Networking</span>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-label">Technologies</span>
+                        <span class="highlight-value">Unity Netcode • C# • Multiplayer</span>
                     </div>
                 </div>
                 
                 <div class="project-footer">
-                    <a href="fantasy.html" class="btn-project-primary">
+                    <a href="OverRule.html" class="btn-project-primary">
                         Voir le projet
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
                             <path d="M5 12h14m0 0l-7-7m7 7l-7 7" stroke="currentColor" stroke-width="2"/>
                         </svg>
                     </a>
-                </div>
-            </div>
-        </article>
-
-        <!-- PROJET 4 : CYBER ARENA -->
-        <article class="project-card" data-tags="unreal completed">
-            <div class="project-status">
-                <span class="status-badge completed">✓ Terminé</span>
-            </div>
-            
-            <div class="project-media">
-                <img src="assets/img/cyber_arena.webp" 
-                     alt="Arène combat Cyber Arena avec ennemis IA" 
-                     loading="lazy">
-                <div class="media-overlay">
-                    <div class="overlay-content">
-                        <a href="cyber.html" class="btn-overlay-primary">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2"/>
-                                <path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="2"/>
+                    <div class="project-links">
+                        <a href="https://github.com/lucasbies/OverRule" target="_blank" rel="noopener" class="icon-link" aria-label="Code GitHub">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                             </svg>
-                            Voir le projet
                         </a>
                     </div>
-                </div>
-            </div>
-            
-            <div class="project-content">
-                <div class="project-header">
-                    <div class="project-tags">
-                        <span class="tag tech">Unreal Engine</span>
-                        <span class="tag tech">AI Blueprint</span>
-                        <span class="tag role">Gameplay</span>
-                    </div>
-                    <div class="project-meta-inline">
-                        <span class="meta-chip">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-                                <path d="M8 1a7 7 0 100 14A7 7 0 008 1z"/>
-                            </svg>
-                            3 semaines
-                        </span>
-                        <span class="meta-chip">Solo</span>
-                    </div>
-                </div>
-                
-                <h2 class="project-title">
-                    <a href="cyber.html">Cyber Arena</a>
-                </h2>
-                
-                <p class="project-description">
-                    Mini-jeu d'arène pour expérimenter <strong>IA comportementale</strong> et mécaniques de combat. 
-                    Ennemis avec états (patrouille, poursuite, attaque) et système de spawn par vagues.
-                </p>
-                
-                <div class="project-highlights">
-                    <div class="highlight-item">
-                        <span class="highlight-label">IA</span>
-                        <span class="highlight-value">Behavior Tree • Perception</span>
-                    </div>
-                </div>
-                
-                <div class="project-footer">
-                    <a href="cyber.html" class="btn-project-primary">
-                        Voir le projet
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                            <path d="M5 12h14m0 0l-7-7m7 7l-7 7" stroke="currentColor" stroke-width="2"/>
-                        </svg>
-                    </a>
                 </div>
             </div>
         </article>
 
     </div>
 
-<!-- Section CTA -->
-<section class="projects-cta-minimal">
+    <!-- Section CTA -->
+    <section class="projects-cta-minimal">
     <div class="cta-minimal-content">
         <h2>Intéressé par mon travail ?</h2>
         <p>
