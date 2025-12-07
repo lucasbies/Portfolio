@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Solitaire Console C++ : jeu Klondike fonctionnel avec POO, gestion mémoire moderne et architecture modulaire. Projet académique 3 jours.">
+    <meta name="author" content="Lucas Bieszczad">
+    <meta name="keywords" content="Lucas Bieszczad, Gameplay Programmer, Unreal Engine, C++, Unity, développeur jeux vidéo, BUT Informatique Graphique, systèmes de combat, AI, Blueprint">
+
+    <!-- Open Graph (Facebook, LinkedIn) -->
+    <meta property="og:title" content="Solitaire Console C++ | Lucas Bieszczad - Gameplay Programmer">
+    <meta property="og:description" content="Solitaire Console C++ : jeu Klondike fonctionnel avec POO, gestion mémoire moderne et architecture modulaire. Projet académique 3 jours.">
+    <meta property="og:image" content="https://ton-site.com/assets/Solitaire.webp">
+    <meta property="og:url" content="https://ton-site.com/Solitaire.html">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="fr_FR">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Solitaire Console C++ | Lucas Bieszczad - Gameplay Programmer">
+    <meta name="twitter:description" content="Solitaire Console C++ : jeu Klondike fonctionnel avec POO, gestion mémoire moderne et architecture modulaire. Projet académique 3 jours.">
+    <meta name="twitter:image" content="https://ton-site.com/assets/Solitaire.webp">
+
+    <!-- Robots & Indexation -->
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://ton-site.com/Solitaire.html">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+
+    <title>Solitaire Console C++ | Lucas Bieszczad - Gameplay Programmer</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <script defer src="assets/script.js"></script>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="main-nav">
+            <a href="index.html" class="logo">
+                <span class="logo-text">Lucas Bieszczad</span>
+                <span class="logo-subtitle">Gameplay Programmer</span>
+            </a>
+            
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="hamburger"></span>
+            </button>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="projets.html" class="nav-link">Projets</a></li>
+                <li><a href="about.html" class="nav-link">À propos</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li class="nav-cta">
+                    <a href="assets/cv.pdf" class="btn btn-header" download>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4m14-7l-5-5m0 0L7 8m5-5v12"/>
+                        </svg>
+                        CV
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>    <main class="project-detail">
+    <!-- Hero du projet -->
+    <section class="project-hero">
+        <div class="project-hero__content">
+            <span class="project-tag">Projet Académique • C++</span>
+            <h1>Solitaire Console C++</h1>
+            <p class="project-subtitle">
+                Jeu de Solitaire implémenté en console avec interface ASCII. 
+                Gestion du plateau, pioche et règles Klondike.
+            </p>
+            
+            <div class="project-meta">
+                <div class="meta-item">
+                    <span class="meta-label">Durée</span>
+                    <span class="meta-value">3 jours</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Langage</span>
+                    <span class="meta-value">C++ 17</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Rôle</span>
+                    <span class="meta-value">Développeur solo</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Contexte</span>
+                    <span class="meta-value">BUT Informatique - S2</span>
+                </div>
+            </div>
+
+            <div class="project-actions">
+                <a href="assets/solitaire.exe" class="btn btn-secondary" download>
+                    📥 Télécharger démo
+                </a>
+            </div>
+        </div>
+
+        <div class="project-hero__media">
+            <img src="assets/Solitaire.webp" 
+                 alt="Interface console du jeu Solitaire avec cartes ASCII et menu de commandes" 
+                 class="project-thumbnail"
+                 loading="eager">
+        </div>
+    </section>
+
+    <!-- Vidéo démo -->
+    <section class="project-section">
+        <h2>Démo vidéo (30s)</h2>
+        <div class="video-container">
+            <video controls poster="assets/projects/solitaire/thumbnail.jpg" preload="metadata">
+                <source src="assets/projects/solitaire/demo.mp4" type="video/mp4">
+                <track kind="captions" src="assets/projects/solitaire/captions.vtt" srclang="fr" label="Français">
+                Votre navigateur ne supporte pas la vidéo HTML5.
+            </video>
+            <p class="video-caption">
+                Gameplay complet : distribution, déplacements, validation règles, victoire automatique.
+            </p>
+        </div>
+    </section>
+
+    <!-- Vue d'ensemble -->
+    <section class="project-section">
+        <h2>Vue d'ensemble</h2>
+        <div class="overview-grid">
+            <div class="overview-card">
+                <h3>🎯 Objectif</h3>
+                <p>
+                    Créer un jeu de Solitaire jouable en terminal, avec respect des règles Klondike 
+                    et interface ASCII fonctionnelle.
+                </p>
+            </div>
+            <div class="overview-card">
+                <h3>🔧 Technologies</h3>
+                <ul class="tech-list">
+                    <li><strong>C++ 17</strong> : POO, logique de jeu console</li>
+                </ul>
+            </div>
+            <div class="overview-card">
+                <h3>📊 Résultats</h3>
+                <ul class="metrics-list">
+                    <li>✅ Jeu fonctionnel en console</li>
+                    <li>✅ Pioche, déplacement cartes et règles Klondike implémentées</li>
+                    <li>✅ Testé manuellement jusqu'à stabilité</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Défis techniques -->
+    <section class="project-section">
+        <h2>Défis techniques rencontrés</h2>
+        <div class="challenges-grid">
+            <article class="challenge-card">
+                <div class="challenge-header">
+                    <span class="challenge-number">01</span>
+                    <h3>Rendu ASCII multi-plateforme</h3>
+                </div>
+                <div class="challenge-content">
+                    <p>
+                        La console Windows gère mal certains caractères UTF-8, rendant les symboles ♠♥♦♣ illisibles.
+                    </p>
+                    <h4>Solution adoptée</h4>
+                    <p>
+                        Détection de l'OS au runtime avec préprocesseur et fallback ASCII pour compatibilité.
+                    </p>
+                </div>
+            </article>
+
+            <article class="challenge-card">
+                <div class="challenge-header">
+                    <span class="challenge-number">02</span>
+                    <h3>Gestion du plateau et règles Klondike</h3>
+                </div>
+                <div class="challenge-content">
+                    <p>
+                        Implémenter les mouvements, montée sur fondations et déplacements entre colonnes 
+                        en respectant les règles du Solitaire.
+                    </p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Captures d'écran -->
+    <section class="project-section">
+        <h2>Captures d'écran</h2>
+        <div class="gallery-grid">
+            <figure class="gallery-item">
+                <img src="assets/projects/solitaire/screenshot-menu.webp" 
+                     alt="Menu principal avec options Nouvelle partie, Charger, Quitter" 
+                     loading="lazy"
+                     class="zoomable">
+                <figcaption>Menu principal</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="assets/projects/solitaire/screenshot-gameplay.webp" 
+                     alt="Partie en cours avec tableau 7 colonnes et fondations partiellement remplies" 
+                     loading="lazy"
+                     class="zoomable">
+                <figcaption>Gameplay (mi-partie)</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <!-- Compétences développées -->
+    <section class="project-section bg-dark">
+        <h2>Compétences développées</h2>
+        <div class="skills-acquired">
+            <div class="skill-category">
+                <h3>Langages & outils</h3>
+                <ul class="tags">
+                    <li class="tag">C++ 17</li>
+                    <li class="tag">Console I/O</li>
+                    <li class="tag">Compilateur GCC</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Concepts appliqués</h3>
+                <ul class="tags">
+                    <li class="tag">POO (Classes, Héritage)</li>
+                    <li class="tag">Gestion état de jeu</li>
+                    <li class="tag">Logique métier complexe</li>
+                    <li class="tag">Validation règles Klondike</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 🔥 NOUVELLE SECTION SIMPLIFIÉE : AMÉLIORATIONS -->
+    <section class="project-section">
+        <h2>Pistes d'amélioration identifiées</h2>
+        <p style="color: var(--text-light); max-width: 800px; margin-bottom: 3rem; line-height: 1.8;">
+            En tant que développeur, je considère chaque projet comme une opportunité d'apprentissage. 
+            Voici les axes d'amélioration que j'ai identifiés pour ce projet.
+        </p>
+
+        <div class="lessons-grid">
+            
+            <!-- Amélioration 1 : Tests -->
+            <div class="lesson-card improvement">
+                <strong>🧪 Tests unitaires automatisés</strong>
+                <p>
+                    <em>Actuellement :</em> Tests manuels uniquement, aucune couverture automatisée.<br>
+                    <em>Objectif :</em> Implémenter <strong>Google Test</strong> (gtest) pour valider les règles 
+                    de déplacement, conditions de victoire et gestion de la pioche.<br>
+                    <em>Impact attendu :</em> <span class="highlight-impact">Plus de fiabilité</span>
+                </p>
+            </div>
+
+            <!-- Amélioration 2 : Smart pointers -->
+            <div class="lesson-card improvement">
+                <strong>⚡ Smart pointers & RAII</strong>
+                <p>
+                    <em>Actuellement :</em> Allocation manuelle avec <code>new/delete</code>, risque de fuites.<br>
+                    <em>Objectif :</em> Migrer vers <code>std::unique_ptr</code> et <code>std::shared_ptr</code> 
+                    pour une gestion automatique de la mémoire.<br>
+                    <em>Impact attendu :</em> <span class="highlight-impact">Aucune fuite mémoire</span>
+                </p>
+            </div>
+
+            <!-- Amélioration 3 : Principes SOLID -->
+            <div class="lesson-card improvement">
+                <strong>📐 Appliquer les principes SOLID</strong>
+                <p>
+                    <em>Actuellement :</em> Architecture monolithique avec couplage fort entre modules.<br>
+                    <em>Objectif :</em> Refactoriser en appliquant <strong>Single Responsibility</strong>, 
+                    <strong>Open/Closed</strong> et <strong>Dependency Inversion</strong> pour une base de code plus maintenable.<br>
+                    <em>Impact attendu :</em> <span class="highlight-impact">Code évolutif et testable</span>
+                </p>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- Ce que j'ai appris -->
+    <section class="project-section bg-dark">
+        <h2>Ce que ce projet m'a appris</h2>
+        <div class="lessons-grid">
+            <div class="lesson-card">
+                <strong>Pragmatisme</strong>
+                <p>Un projet simple mais <em>fonctionnel</em> vaut mieux qu'un projet ambitieux mais inachevé.</p>
+            </div>
+            <div class="lesson-card">
+                <strong>Importance des tests</strong>
+                <p>Les tests manuels sont chronophages et peu fiables. L'automatisation est indispensable pour des projets plus complexes.</p>
+            </div>
+            <div class="lesson-card">
+                <strong>Architecture dès le début</strong>
+                <p>Refactoriser du code monolithique coûte 3× plus cher que de structurer dès le départ.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Autres projets -->
+    <section class="project-section">
+        <h2>Projets similaires</h2>
+        <div class="related-projects">
+            <a href="steampunk.html" class="related-card">
+                <img src="assets/Blocking.webp" alt="Blockout niveau Steampunk" loading="lazy">
+                <h3>Projet Steampunk</h3>
+                <p>Level Design • Unreal Engine 5 • Blueprint</p>
+            </a>
+            <a href="pathfinding.html" class="related-card">
+                <img src="assets/projects/pathfinding/thumb.webp" alt="Visualisation A* pathfinding" loading="lazy">
+                <h3>Pathfinding A*</h3>
+                <p>Algorithmes • C++ • Visualisation</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- CTA final -->
+    <section class="project-cta">
+        <div class="cta-content">
+            <h2>Intéressé par mon profil ?</h2>
+            <p>
+                Je recherche un <strong>stage Gameplay Programmer</strong> de 6 mois (été 2026).
+                Disponible pour discuter de vos projets C++/Unreal.
+            </p>
+            <div class="cta-actions">
+                <a href="contact.html" class="btn btn-primary">Me contacter</a>
+                <a href="projets.html" class="btn btn-secondary">Voir tous mes projets</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            
+            <!-- Colonne 1 : Info -->
+            <div class="footer-section">
+                <h3 class="footer-title">Lucas Bieszczad</h3>
+                <p class="footer-tagline">
+                    Gameplay Programmer passionné par les systèmes de combat et l'intelligence artificielle.
+                </p>
+                <div class="footer-social">
+                    <a href="https://github.com/lucasbies" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/lucas-bieszczad/" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
+                    <a href="mailto:lucasbieszczad@gmail.com" class="social-icon" aria-label="Email">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+    
+            <!-- Colonne 2 : Navigation -->
+            <div class="footer-section">
+                <h4 class="footer-heading">Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="projets.html">Projets</a></li>
+                    <li><a href="about.html">À propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+    
+            <!-- Colonne 3 : Projets phares -->
+            <div class="footer-section">
+                <h4 class="footer-heading">Projets phares</h4>
+                <ul class="footer-links">
+                    <li><a href="steampunk.html">Projet Steampunk</a></li>
+                    <li><a href="solitaire.html">Solitaire C++</a></li>
+                    <li><a href="projets.html">Tous les projets →</a></li>
+                </ul>
+            </div>
+    
+            <!-- Colonne 4 : Contact rapide -->
+            <div class="footer-section">
+                <h4 class="footer-heading">Contact</h4>
+                <ul class="footer-contact">
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                        </svg>
+                        <a href="mailto:lucasbieszczad@gmail.com">lucasbieszczad@gmail.com</a>
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                            <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                        </svg>
+                        <span>France • Disponible à distance</span>
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="16" y1="2" x2="16" y2="6"/>
+                            <line x1="8" y1="2" x2="8" y2="6"/>
+                            <line x1="3" y1="10" x2="21" y2="10"/>
+                        </svg>
+                        <span>Stage été 2026 • 6 mois</span>
+                    </li>
+                </ul>
+            </div>
+    
+        </div>
+    
+        <!-- Copyright bar -->
+        <div class="footer-bottom">
+            <p>© 2025 Lucas Bieszczad — Tous droits réservés</p>
+            <p class="footer-credits">
+                Conçu avec passion • Built with <span class="heart">❤️</span>
+            </p>
+        </div>
+    </footer></body>
+</html>

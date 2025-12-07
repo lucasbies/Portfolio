@@ -1,0 +1,422 @@
+<!-- Hero avec vidéo background -->
+<section class="hero-home">
+    <div class="hero-background">
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="assets/videos/hero-gameplay.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+    </div>
+    
+    <div class="hero-content">
+        <span class="hero-badge">Disponible en stage • Été 2026</span>
+        <h1 class="hero-title">
+            <span class="title-line">Lucas Bieszczad</span>
+            <span class="title-role">Gameplay Programmer</span>
+        </h1>
+        <p class="hero-tagline">
+            Étudiant BUT Informatique Graphique spécialisé <strong>systèmes de combat & AI</strong> sous Unreal Engine.
+            <br>Passionné par la création d'expériences <em>responsives</em> et <em>mémorables</em>.
+        </p>
+        
+        <div class="hero-stats">
+            <div class="stat-item">
+                <span class="stat-number">5+</span>
+                <span class="stat-label">Projets C++/UE5/Unity</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">1200+</span>
+                <span class="stat-label">Heures de dev</span>
+            </div>
+        </div>
+
+        <div class="hero-actions">
+            <a href="projets.html" class="btn btn-primary">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                    <path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" stroke="currentColor" stroke-width="2"/>
+                </svg>
+                Voir mes projets
+            </a>
+            <a href="contact.html" class="btn btn-secondary">
+                Me contacter
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                    <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke="currentColor" stroke-width="2"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+    <br>
+    <div class="scroll-indicator" aria-hidden="true">
+        <span>Scroll</span>
+        <svg width="24" height="24" viewBox="0 0 24 24">
+            <path d="M12 5v14m0 0l-7-7m7 7l7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+    </div>
+</section>
+
+<!-- Projets phares (3 meilleurs) -->
+<section class="featured-projects">
+    <div class="section-header">
+        <h2 class="section-title">Projets phares</h2>
+        <a href="projets.html" class="link-all">
+            Voir tous les projets
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2"/>
+            </svg>
+        </a>
+    </div>
+
+    <div class="projects-grid">
+        
+        <!-- Projet 1 : Steampunk -->
+        <article class="project-card featured">
+            <div class="project-media">
+                <a href="steampunk.html">
+                    <img src="assets/Blocking.webp" 
+                         alt="Blockout niveau steampunk avec plateformes et ennemis volants" 
+                         loading="lazy">
+                </a>
+                <span class="project-badge">Featured</span>
+                <div class="project-overlay">
+                    <a href="steampunk.html" class="overlay-link">Voir le projet</a>
+                </div>
+            </div>
+            <div class="project-content">
+                <div class="project-tags">
+                    <span class="tag">Unreal Engine 5</span>
+                    <span class="tag">Blueprint</span>
+                    <span class="tag">Level Design</span>
+                </div>
+                <h3 class="project-title">
+                    <a href="steampunk.html">Projet Steampunk</a>
+                </h3>
+                <p class="project-description">
+                    Niveau action/plateforme avec système de dash multi-directionnel, 
+                    wall-running, et AI ennemis. Équipe 5, 6 mois, gameplay programmé en C++/Blueprint.
+                </p>
+                <div class="project-meta">
+                    <span class="meta-item">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M8 1a7 7 0 100 14A7 7 0 008 1zm0 13A6 6 0 118 2a6 6 0 010 12z"/>
+                            <path d="M8 3.5a.5.5 0 01.5.5v4a.5.5 0 01-.5.5H5.5a.5.5 0 010-1H7.5V4a.5.5 0 01.5-.5z"/>
+                        </svg>
+                        6 mois
+                    </span>
+                    <span class="meta-item">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M8 8a3 3 0 100-6 3 3 0 000 6zm2-3a2 2 0 11-4 0 2 2 0 014 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+                        </svg>
+                        5 personnes
+                    </span>
+                </div>
+            </div>
+        </article>
+
+        <!-- Projet 2 : Solitaire C++ -->
+<article class="project-card">
+    <div class="project-media">
+        <a href="solitaire.html">
+            <img src="assets/Solitaire.webp" 
+                 alt="Interface console du jeu Solitaire avec cartes ASCII" 
+                 loading="lazy">
+        </a>
+        <div class="project-overlay">
+            <a href="solitaire.html" class="overlay-link">Voir le projet</a>
+        </div>
+    </div>
+    <div class="project-content">
+        <div class="project-tags">
+            <span class="tag">C++ 17</span>
+            <span class="tag">STL</span>
+            <span class="tag">Développement solo</span>
+        </div>
+        <h3 class="project-title">
+            <a href="solitaire.html">Solitaire Console C++</a>
+        </h3>
+        <p class="project-description">
+            Jeu Klondike Solitaire complet en console, avec gestion du plateau, 
+            pioche, fondations, déplacements entre colonnes et découverte des cartes. 
+            ~1200 lignes, réalisé en 3 jours.
+        </p>
+        <div class="project-meta">
+            <span class="meta-item">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 1a7 7 0 100 14A7 7 0 008 1zm0 13A6 6 0 118 2a6 6 0 010 12z"/>
+                </svg>
+                3 jours
+            </span>
+            <span class="meta-item">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M2 1a1 1 0 011-1h10a1 1 0 011 1v14a1 1 0 01-1 1H3a1 1 0 01-1-1V1zm10 0H4v14h8V1z"/>
+                </svg>
+                ~1200 lignes
+            </span>
+        </div>
+    </div>
+</article>
+
+
+        <!-- Projet 3 : Placeholder pour futur projet -->
+        <article class="project-card upcoming">
+            <div class="project-media">
+                <a href = "#">
+                    <img src="assets/img/placeholder-project.webp" 
+                        alt="Aperçu projet à venir" 
+                        loading="lazy">
+                </a>
+                <span class="project-badge upcoming">À venir</span>
+            </div>
+            <div class="project-content">
+                <div class="project-tags">
+                    <span class="tag">Unity</span>
+                    <span class="tag">Multiplayer</span>
+                </div>
+                <h3 class="project-title">Projet Multiplayer</h3>
+                <p class="project-description">
+                    Système de matchmaking et synchronisation réseau en développement. 
+                    Disponible prochainement avec breakdown détaillé.
+                </p>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+<!-- Stack technique -->
+<section class="tech-stack">
+    <div class="section-header">
+        <h2 class="section-title">Stack technique</h2>
+        <p class="section-subtitle">
+            Outils et technologies que j'utilise quotidiennement
+        </p>
+    </div>
+
+    <div class="stack-grid">
+        
+        <div class="stack-category">
+            <h3 class="category-title">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2"/>
+                </svg>
+                Moteurs & Langages
+            </h3>
+            <div class="stack-items">
+                <div class="stack-item">
+                    <img src="assets/Logo/LogoUnreal.svg" alt="Unreal Engine logo" width="32" height="32">
+                    <span>Unreal Engine 5 (Blueprints)</span>
+                </div>
+                <div class="stack-item">
+                    <img src="assets/Logo/LogoC++.webp" alt="C++ logo" width="32" height="32">
+                    <span>C++ 17/20</span>
+                </div>
+                <div class="stack-item">
+                    <img src="assets/Logo/LogoUnity.svg" alt="Unity logo" width="32" height="32">
+                    <span>Unity</span>
+                </div>
+                <div class="stack-item">
+                    <img src="assets/Logo/LogoCsharp.webp" alt="C# logo" width="32" height="32">
+                    <span>C#</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="stack-category">
+            <h3 class="category-title">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" stroke="currentColor" stroke-width="2"/>
+                </svg>
+                Outils & Workflow
+            </h3>
+            <div class="stack-items">
+                <div class="stack-item">
+                    <img src="assets/Logo/Logogithub.svg" alt="Git logo" width="32" height="32">
+                    <span>Git / GitHub</span>
+                </div>
+                <div class="stack-item">
+                    <img src="assets/Logo/LogoVisualStudio.webp" alt="Visual Studio logo" width="32" height="32">
+                    <span>Visual Studio</span>
+                </div>
+                <div class="stack-item">
+                    <img src="assets/Logo/LogoVSCode.webp" alt="VS Code logo" width="32" height="32">
+                    <span>VS Code</span>
+                </div>
+                <div class="stack-item">
+                    <img src="assets/Logo/LogoNotion.webp" alt="Notion logo" width="32" height="32">
+                    <span>Notion</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="stack-category">
+    <h3 class="category-title">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2"/>
+        </svg>
+        Design & Level Design
+    </h3>
+
+    <div class="stack-items">
+
+        <!-- 3D / Design -->
+        <div class="stack-item">
+            <img src="assets/Logo/LogoBlender.webp" alt="Blender logo" width="32" height="32">
+            <span>Blender</span>
+        </div>
+        <div class="stack-item">
+            <img src="assets/Logo/LogoPhotopea.webp" alt="Photopea logo" width="32" height="32">
+            <span>Photopea</span>
+        </div>
+
+        <!-- UE5 Gameplay / Level Design -->
+        <div class="stack-item">
+            <img src="assets/Logo/LogoTree.webp" alt="Behavior Trees icon" width="32" height="32">
+            <span>Behavior Trees (AI)</span>
+        </div>
+        <div class="stack-item">
+            <img src="assets/Logo/LogoNavMesh.svg" alt="Navigation Mesh icon" width="32" height="32">
+            <span>Navigation Mesh</span>
+        </div>
+    </div>
+</div>
+
+
+    </div>
+</section>
+
+<!-- Storytelling : Pourquoi le game dev -->
+<section class="story-section">
+    <div class="story-container">
+        <div class="story-media">
+            <img src="assets/img/gaming-setup.webp" 
+                 alt="Setup de développement avec écrans et clavier mécanique" 
+                 loading="lazy"
+                 class="story-image">
+        </div>
+        <div class="story-content">
+            <span class="story-label">Mon parcours</span>
+            <h2 class="story-title">Pourquoi le développement de jeux ?</h2>
+            <div class="story-text">
+                <p>
+                    Tout a commencé à <strong>15 ans</strong>, en découvrant la spécialité <strong>NSI</strong> 
+                    (Numérique et Sciences Informatiques). Cette année m'a permis d'écrire mes premiers 
+                    programmes en Python, mais surtout de créer <em>mon premier jeu vidéo</em> : 
+                    un petit jeu de plateforme 2D sur Unity avec des mécaniques simples mais efficaces.
+                </p>
+                <p>
+                    Un an plus tard, j'ai consacré mes vacances à développer un <strong>jeu 3D sur Unity</strong>. 
+                    Bien que jamais publié, ce projet m'a enseigné la <strong>persévérance</strong> et 
+                    l'importance d'une <em>architecture solide</em>. C'est ce qui m'a poussé à intégrer le 
+                    <strong>BUT Informatique Graphique</strong> pour transformer cette passion en expertise.
+                </p>
+                <p>
+                    Mon objectif : rejoindre un studio AA/AAA et concevoir des mécaniques de gameplay 
+                    qui procurent cette <strong>sensation d'émerveillement</strong> que j'ai ressentie 
+                    en découvrant les physiques de <em>Breath of the Wild</em> ou le combat 
+                    ultra-réactif de <em>God of War</em>.
+                </p>
+            </div>
+            <a href="about.html" class="btn btn-outline">
+                En savoir plus sur mon parcours
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Timeline formation -->
+<section class="timeline-section">
+    <div class="section-header">
+        <h2 class="section-title">Formation & certifications</h2>
+    </div>
+    
+    <div class="timeline">
+        <article class="timeline-item">
+            <div class="timeline-marker">
+                <span class="timeline-year">2024-2027</span>
+            </div>
+            <div class="timeline-content">
+                <h3 class="timeline-title">BUT Informatique Graphique</h3>
+                <p class="timeline-location">IUT Clermont Auvergne · Le Puy-en-Velay</p>
+                <p class="timeline-description">
+                    Spécialisation Développement Jeu Vidéo : C++, Unreal Engine, Unity, 
+                    architecture logicielle, algorithmique avancée, travail en équipe (méthodes Agile).
+                </p>
+                <ul class="timeline-achievements">
+                    <li>Projet semestriel Steampunk (6 mois, équipe 5)</li>
+                    <li>Cours avancés : AI, shaders, optimisation</li>
+                    <li>Projet semestriel multijoueur (6 mois, équipe 5)</li>
+                    <li>Stage prévu été 2026 (6 mois)</li>
+                </ul>
+            </div>
+        </article>
+
+        <article class="timeline-item">
+            <div class="timeline-marker">
+                <span class="timeline-year">2024</span>
+            </div>
+            <div class="timeline-content">
+                <h3 class="timeline-title">Baccalauréat Général</h3>
+                <p class="timeline-location">Spécialités Mathématiques & NSI</p>
+                <p class="timeline-description">
+                    Mention Assez Bien · Projet NSI : jeu de plateforme Python/Pygame avec éditeur de niveaux.
+                </p>
+            </div>
+        </article>
+
+        <article class="timeline-item">
+            <div class="timeline-marker">
+                <span class="timeline-year">2024</span>
+            </div>
+            <div class="timeline-content">
+                <h3 class="timeline-title">BAFA (Brevet d'Aptitude aux Fonctions d'Animateur)</h3>
+                <p class="timeline-location">Formation à Bourges</p>
+                <p class="timeline-description">
+                    Compétences en travail d'équipe, gestion de groupe, communication.
+                </p>
+            </div>
+        </article>
+    </div>
+</section>
+
+<!-- CTA Final -->
+<section class="cta-final">
+    <div class="cta-background">
+        <div class="cta-pattern"></div>
+    </div>
+    <div class="cta-content">
+        <h2 class="cta-title">Construisons quelque chose ensemble</h2>
+        <p class="cta-subtitle">
+            Je recherche un <strong>stage Gameplay Programmer</strong> de 6 mois (été 2026).
+            <br>Disponible pour discuter de vos projets C++/Unreal Engine.
+        </p>
+        <div class="cta-actions">
+            <a href="contact.html" class="btn btn-primary btn-large">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke="currentColor" stroke-width="2"/>
+                </svg>
+                Envoyer un message
+            </a>
+            <a href="assets/cv.pdf" class="btn btn-secondary btn-large" download>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4m14-7l-5-5m0 0L7 8m5-5v12" stroke="currentColor" stroke-width="2"/>
+                </svg>
+                Télécharger mon CV
+            </a>
+        </div>
+        <div class="cta-social">
+            <a href="https://github.com/lucasbies" target="_blank" rel="noopener" class="social-link">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+                GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/lucas-bieszczad/" target="_blank" rel="noopener" class="social-link">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+                LinkedIn
+            </a>
+        </div>
+    </div>
+</section>

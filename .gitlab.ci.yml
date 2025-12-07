@@ -1,0 +1,13 @@
+image: node:20
+
+pages:
+  stage: deploy
+  script:
+    - npm install
+    - node generate.js
+    - mv dist public
+  artifacts:
+    paths:
+      - public
+  only:
+    - main
