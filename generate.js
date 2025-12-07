@@ -67,12 +67,12 @@ const pages = [
         }
     },
     {
-        template: 'Solitaire.hbs',
-        output: 'Solitaire.html',
+        template: 'solitaire.hbs',
+        output: 'solitaire.html',
         meta: {
             title: 'Solitaire Console C++ | Lucas Bieszczad - Gameplay Programmer',
             description: 'Solitaire Console C++ : jeu Klondike fonctionnel avec POO, gestion mémoire moderne et architecture modulaire. Projet académique 3 jours.',
-            url: 'https://lucasbies.github.io/Portfolio/Solitaire.html',
+            url: 'https://lucasbies.github.io/Portfolio/solitaire.html',
             image: 'https://lucasbies.github.io/Portfolio/assets/Solitaire.webp',
             type: 'article'
         }
