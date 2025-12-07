@@ -240,3 +240,16 @@ document.addEventListener('DOMContentLoaded', () => {
     // Trigger initial
     messageTextarea.dispatchEvent(new Event('input'));
 });
+
+// Différer exécution JS non-critique
+if ('requestIdleCallback' in window) {
+    requestIdleCallback(() => {
+        initNonCritical();
+    });
+} else {
+    setTimeout(initNonCritical, 100);
+}
+
+function initNonCritical() {
+    // Typewriter, carousel, etc.
+}

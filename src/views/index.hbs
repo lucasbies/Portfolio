@@ -1,7 +1,9 @@
 <!-- Hero avec vidéo background -->
 <section class="hero-home">
     <div class="hero-background">
-        <video autoplay muted loop playsinline class="hero-video">
+        <video autoplay muted loop playsinline class="hero-video" 
+               poster="assets/videos/hero-poster.webp"
+               preload="metadata">
             <source src="assets/videos/hero-gameplay.mp4" type="video/mp4">
         </video>
         <div class="hero-overlay"></div>
@@ -18,10 +20,11 @@
             <br>Passionné par la création d'expériences <em>responsives</em> et <em>mémorables</em>.
         </p>
         
+        <!-- Simplifier hero stats -->
         <div class="hero-stats">
             <div class="stat-item">
                 <span class="stat-number">5+</span>
-                <span class="stat-label">Projets C++/UE5/Unity</span>
+                <span class="stat-label">Projets</span>
             </div>
             <div class="stat-item">
                 <span class="stat-number">1200+</span>
@@ -208,7 +211,12 @@
             </h3>
             <div class="stack-items">
                 <div class="stack-item">
-                    <img src="assets/Logo/LogoUnreal.svg" alt="Unreal Engine logo" width="32" height="32">
+                    <img src="assets/Logo/LogoUnreal.svg" 
+                         alt="Unreal Engine logo" 
+                         width="32" 
+                         height="32"
+                         loading="lazy"
+                         decoding="async">
                     <span>Unreal Engine 5 (Blueprints)</span>
                 </div>
                 <div class="stack-item">
