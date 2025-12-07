@@ -54,18 +54,18 @@ const pages = [
             image: 'https://lucasbies.github.io/Portfolio/assets/og-image.webp',
             type: 'website'
         }
-    },/*
+    },
     {
-        template: 'steampunk.hbs',
-        output: 'steampunk.html',
+        template: 'TransMontagne.hbs',
+        output: 'TransMontagne.html',
         meta: {
             title: 'Projet Steampunk | Lucas Bieszczad - Gameplay Programmer',
             description: 'Projet Steampunk : niveau action/plateforme Unreal Engine 5 avec dash multi-directionnel, wall-running et AI ennemis. Équipe 5, 6 mois.',
-            url: 'https://lucasbies.github.io/Portfolio/steampunk.html',
+            url: 'https://lucasbies.github.io/Portfolio/TransMontagne.html',
             image: 'https://lucasbies.github.io/Portfolio/assets/Blocking.webp',
             type: 'article'
         }
-    },*/
+    },
     {
         template: 'Solitaire.hbs',
         output: 'Solitaire.html',
