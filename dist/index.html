@@ -38,6 +38,13 @@
 
     <title>Lucas Bieszczad | Gameplay Programmer - Portfolio</title>
     
+    <!-- ✅ PRELOAD FONTS CRITIQUES (charge en priorité) -->
+    <link rel="preload" href="assets/fonts/montserrat-v31-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/montserrat-v31-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+    
+    <!-- ✅ FONTS CSS SELF-HOSTED (pas de DNS externe) -->
+    <link rel="stylesheet" href="assets/fonts.css">
+    
     <!-- ✅ CSS CRITIQUE INLINE (améliore FCP) -->
     <style>
         :root{--primary:#9050E0;--text-dark:#2C3E50;--bg-white:#fff;--bg-main:#F0F0F0}
@@ -53,11 +60,6 @@
     
     <!-- ✅ DEFER SCRIPT (exécute après HTML parsé) -->
     <script src="assets/script.js" defer></script>
-
-    <!-- ✅ PRECONNECT FONTS (réduit latence DNS) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 </head>
 <body>

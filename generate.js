@@ -1,8 +1,8 @@
 const Handlebars = require('handlebars');
-const fs = require('fs-extra');  // ✅ Changé de 'fs' à 'fs-extra'
+const fs = require('fs-extra');
 const path = require('path');
 
-// ✅ NOUVEAU : Nettoyage et recréation du dossier dist
+// ✅ Nettoyage et recréation du dossier dist
 console.log('🧹 Nettoyage du dossier dist...');
 fs.emptyDirSync('./dist');
 
@@ -94,23 +94,19 @@ const pages = [
 console.log('🔨 Génération des pages HTML...');
 pages.forEach(page => {
     try {
-        // Charger le contenu de la page
         const pagePath = path.join(__dirname, 'src/views', page.template);
         const pageContent = fs.readFileSync(pagePath, 'utf8');
         const pageTemplate = Handlebars.compile(pageContent);
         
-        // Passer les meta au template de page
         const pageHtml = pageTemplate({
             meta: page.meta
         });
         
-        // Injecter dans le layout avec meta tags
         const finalHtml = layoutTemplate({
             body: pageHtml,
             meta: page.meta
         });
         
-        // Écrire le fichier final
         const outputPath = path.join(__dirname, 'dist', page.output);
         fs.writeFileSync(outputPath, finalHtml);
         
@@ -120,7 +116,7 @@ pages.forEach(page => {
     }
 });
 
-// ✅ COPIE DES ASSETS (CSS, JS, images, etc.)
+// ✅ COPIE DES ASSETS (CSS, JS, images, fonts, etc.)
 console.log('📂 Copie des assets...');
 try {
     fs.copySync('./src/assets', './dist/assets');
