@@ -38,12 +38,20 @@
 
     <title>Contact | Lucas Bieszczad - Gameplay Programmer</title>
     
-    <!-- ✅ PRELOAD FONTS CRITIQUES (charge en priorité) -->
+    <!-- ✅ PRELOAD FONTS CRITIQUES (charge IMMÉDIATEMENT) -->
     <link rel="preload" href="assets/fonts/montserrat-v31-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="assets/fonts/montserrat-v31-latin-700.woff2" as="font" type="font/woff2" crossorigin>
     
-    <!-- ✅ FONTS CSS SELF-HOSTED (pas de DNS externe) -->
-    <link rel="stylesheet" href="assets/fonts.css">
+    <!-- ✅ FONTS CSS INLINE (pas de requête HTTP supplémentaire) -->
+    <style>
+        /* MONTSERRAT SELF-HOSTED v31 */
+        @font-face{font-display:swap;font-family:'Montserrat';font-style:normal;font-weight:300;src:url('assets/fonts/montserrat-v31-latin-300.woff2') format('woff2')}
+        @font-face{font-display:swap;font-family:'Montserrat';font-style:normal;font-weight:400;src:url('assets/fonts/montserrat-v31-latin-regular.woff2') format('woff2')}
+        @font-face{font-display:swap;font-family:'Montserrat';font-style:normal;font-weight:500;src:url('assets/fonts/montserrat-v31-latin-500.woff2') format('woff2')}
+        @font-face{font-display:swap;font-family:'Montserrat';font-style:normal;font-weight:600;src:url('assets/fonts/montserrat-v31-latin-600.woff2') format('woff2')}
+        @font-face{font-display:swap;font-family:'Montserrat';font-style:normal;font-weight:700;src:url('assets/fonts/montserrat-v31-latin-700.woff2') format('woff2')}
+        @font-face{font-display:swap;font-family:'Montserrat';font-style:normal;font-weight:800;src:url('assets/fonts/montserrat-v31-latin-800.woff2') format('woff2')}
+    </style>
     
     <!-- ✅ CSS CRITIQUE INLINE (améliore FCP) -->
     <style>
