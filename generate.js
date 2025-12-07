@@ -1,8 +1,13 @@
 const Handlebars = require('handlebars');
-const fs = require('fs');
+const fs = require('fs-extra');  // ✅ Changé de 'fs' à 'fs-extra'
 const path = require('path');
 
+// ✅ NOUVEAU : Nettoyage et recréation du dossier dist
+console.log('🧹 Nettoyage du dossier dist...');
+fs.emptyDirSync('./dist');
+
 // Enregistrer les partials
+console.log('📦 Chargement des partials...');
 const partials = ['header', 'footer'];
 partials.forEach(partial => {
     const partialPath = path.join(__dirname, 'src/partials', `${partial}.hbs`);
@@ -23,8 +28,8 @@ const pages = [
         meta: {
             title: 'Lucas Bieszczad | Gameplay Programmer - Portfolio',
             description: 'Lucas Bieszczad | Gameplay Programmer étudiant spécialisé en systèmes de combat et AI sur Unreal Engine 5. Portfolio projets C++/Blueprint.',
-            url: 'https://ton-site.com/',
-            image: 'https://ton-site.com/assets/og-image.webp',
+            url: 'https://lucasbies.github.io/Portfolio/',
+            image: 'https://lucasbies.github.io/Portfolio/assets/og-image.webp',
             type: 'website'
         }
     },
@@ -34,8 +39,8 @@ const pages = [
         meta: {
             title: 'À propos | Lucas Bieszczad - Gameplay Programmer',
             description: 'Lucas Bieszczad, 18 ans, étudiant BUT Informatique Graphique au Puy-en-Velay. Spécialisé Unreal Engine 5, C++, systèmes de combat et AI.',
-            url: 'https://ton-site.com/about.html',
-            image: 'https://ton-site.com/assets/og-image.webp',
+            url: 'https://lucasbies.github.io/Portfolio/about.html',
+            image: 'https://lucasbies.github.io/Portfolio/assets/og-image.webp',
             type: 'profile'
         }
     },
@@ -45,8 +50,8 @@ const pages = [
         meta: {
             title: 'Projets | Lucas Bieszczad - Gameplay Programmer',
             description: 'Portfolio projets jeux vidéo : niveau Steampunk Unreal Engine 5, Solitaire C++, systèmes de combat et AI. Gameplay Programming.',
-            url: 'https://ton-site.com/projets.html',
-            image: 'https://ton-site.com/assets/og-image.webp',
+            url: 'https://lucasbies.github.io/Portfolio/projets.html',
+            image: 'https://lucasbies.github.io/Portfolio/assets/og-image.webp',
             type: 'website'
         }
     },/*
@@ -56,8 +61,8 @@ const pages = [
         meta: {
             title: 'Projet Steampunk | Lucas Bieszczad - Gameplay Programmer',
             description: 'Projet Steampunk : niveau action/plateforme Unreal Engine 5 avec dash multi-directionnel, wall-running et AI ennemis. Équipe 5, 6 mois.',
-            url: 'https://ton-site.com/steampunk.html',
-            image: 'https://ton-site.com/assets/Blocking.webp',
+            url: 'https://lucasbies.github.io/Portfolio/steampunk.html',
+            image: 'https://lucasbies.github.io/Portfolio/assets/Blocking.webp',
             type: 'article'
         }
     },*/
@@ -67,8 +72,8 @@ const pages = [
         meta: {
             title: 'Solitaire Console C++ | Lucas Bieszczad - Gameplay Programmer',
             description: 'Solitaire Console C++ : jeu Klondike fonctionnel avec POO, gestion mémoire moderne et architecture modulaire. Projet académique 3 jours.',
-            url: 'https://ton-site.com/Solitaire.html',
-            image: 'https://ton-site.com/assets/Solitaire.webp',
+            url: 'https://lucasbies.github.io/Portfolio/Solitaire.html',
+            image: 'https://lucasbies.github.io/Portfolio/assets/Solitaire.webp',
             type: 'article'
         }
     },
@@ -78,14 +83,15 @@ const pages = [
         meta: {
             title: 'Contact | Lucas Bieszczad - Gameplay Programmer',
             description: 'Contactez Lucas Bieszczad pour un stage Gameplay Programmer (été 2026), projet C++/Unreal Engine ou collaboration. Réponse sous 48h.',
-            url: 'https://ton-site.com/contact.html',
-            image: 'https://ton-site.com/assets/og-image.webp',
+            url: 'https://lucasbies.github.io/Portfolio/contact.html',
+            image: 'https://lucasbies.github.io/Portfolio/assets/og-image.webp',
             type: 'website'
         }
     }
 ];
 
 // Générer chaque page
+console.log('🔨 Génération des pages HTML...');
 pages.forEach(page => {
     try {
         // Charger le contenu de la page
@@ -93,8 +99,10 @@ pages.forEach(page => {
         const pageContent = fs.readFileSync(pagePath, 'utf8');
         const pageTemplate = Handlebars.compile(pageContent);
         
-        // Compiler la page avec ses données
-        const pageHtml = pageTemplate({});
+        // Passer les meta au template de page
+        const pageHtml = pageTemplate({
+            meta: page.meta
+        });
         
         // Injecter dans le layout avec meta tags
         const finalHtml = layoutTemplate({
@@ -106,10 +114,20 @@ pages.forEach(page => {
         const outputPath = path.join(__dirname, 'dist', page.output);
         fs.writeFileSync(outputPath, finalHtml);
         
-        console.log(`✅ ${page.output} généré avec succès`);
+        console.log(`   ✅ ${page.output} généré avec succès`);
     } catch (error) {
-        console.error(`❌ Erreur lors de la génération de ${page.output}:`, error);
+        console.error(`   ❌ Erreur lors de la génération de ${page.output}:`, error.message);
     }
 });
 
+// ✅ COPIE DES ASSETS (CSS, JS, images, etc.)
+console.log('📂 Copie des assets...');
+try {
+    fs.copySync('./src/assets', './dist/assets');
+    console.log('   ✅ Assets copiés avec succès');
+} catch (error) {
+    console.error('   ❌ Erreur lors de la copie des assets:', error.message);
+}
+
 console.log('\n🎉 Génération terminée !');
+console.log('📁 Fichiers générés dans le dossier ./dist/');
