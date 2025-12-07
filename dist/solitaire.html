@@ -114,16 +114,13 @@
 
     <!-- Vidéo démo -->
     <section class="project-section">
-        <h2>Démo vidéo (30s)</h2>
+        <h2>Démo vidéo</h2>
         <div class="video-container">
-            <video controls poster="assets/projects/solitaire/thumbnail.jpg" preload="metadata">
-                <source src="assets/projects/solitaire/demo.mp4" type="video/mp4">
+            <video controls poster="assets/projects/solitaire/thumbnail.webp" preload="metadata">
+                <source src="assets/projects/solitaire/Solitaire.mp4" type="video/mp4">
                 <track kind="captions" src="assets/projects/solitaire/captions.vtt" srclang="fr" label="Français">
                 Votre navigateur ne supporte pas la vidéo HTML5.
             </video>
-            <p class="video-caption">
-                Gameplay complet : distribution, déplacements, validation règles, victoire automatique.
-            </p>
         </div>
     </section>
 
@@ -195,14 +192,14 @@
         <h2>Captures d'écran</h2>
         <div class="gallery-grid">
             <figure class="gallery-item">
-                <img src="assets/projects/solitaire/screenshot-menu.webp" 
+                <img src="assets/projects/solitaire/StartGame.webp" 
                      alt="Menu principal avec options Nouvelle partie, Charger, Quitter" 
                      loading="lazy"
                      class="zoomable">
                 <figcaption>Menu principal</figcaption>
             </figure>
             <figure class="gallery-item">
-                <img src="assets/projects/solitaire/screenshot-gameplay.webp" 
+                <img src="assets/projects/solitaire/MidGame.webp" 
                      alt="Partie en cours avec tableau 7 colonnes et fondations partiellement remplies" 
                      loading="lazy"
                      class="zoomable">
@@ -237,50 +234,44 @@
 
     <!-- 🔥 NOUVELLE SECTION SIMPLIFIÉE : AMÉLIORATIONS -->
     <section class="project-section">
-        <h2>Pistes d'amélioration identifiées</h2>
-        <p style="color: var(--text-light); max-width: 800px; margin-bottom: 3rem; line-height: 1.8;">
-            En tant que développeur, je considère chaque projet comme une opportunité d'apprentissage. 
-            Voici les axes d'amélioration que j'ai identifiés pour ce projet.
-        </p>
+    <h2>Évolution depuis ce projet</h2>
+    <p style="color: var(--text-light); max-width: 800px; margin-bottom: 3rem; line-height: 1.8;">
+        Ce projet marquait mes <strong>premiers pas en C++</strong> (Semestre 1). 
+        Voici comment mes compétences ont évolué depuis.
+    </p>
 
-        <div class="lessons-grid">
-            
-            <!-- Amélioration 1 : Tests -->
-            <div class="lesson-card improvement">
-                <strong>🧪 Tests unitaires automatisés</strong>
-                <p>
-                    <em>Actuellement :</em> Tests manuels uniquement, aucune couverture automatisée.<br>
-                    <em>Objectif :</em> Implémenter <strong>Google Test</strong> (gtest) pour valider les règles 
-                    de déplacement, conditions de victoire et gestion de la pioche.<br>
-                    <em>Impact attendu :</em> <span class="highlight-impact">Plus de fiabilité</span>
-                </p>
-            </div>
-
-            <!-- Amélioration 2 : Smart pointers -->
-            <div class="lesson-card improvement">
-                <strong>⚡ Smart pointers & RAII</strong>
-                <p>
-                    <em>Actuellement :</em> Allocation manuelle avec <code>new/delete</code>, risque de fuites.<br>
-                    <em>Objectif :</em> Migrer vers <code>std::unique_ptr</code> et <code>std::shared_ptr</code> 
-                    pour une gestion automatique de la mémoire.<br>
-                    <em>Impact attendu :</em> <span class="highlight-impact">Aucune fuite mémoire</span>
-                </p>
-            </div>
-
-            <!-- Amélioration 3 : Principes SOLID -->
-            <div class="lesson-card improvement">
-                <strong>📐 Appliquer les principes SOLID</strong>
-                <p>
-                    <em>Actuellement :</em> Architecture monolithique avec couplage fort entre modules.<br>
-                    <em>Objectif :</em> Refactoriser en appliquant <strong>Single Responsibility</strong>, 
-                    <strong>Open/Closed</strong> et <strong>Dependency Inversion</strong> pour une base de code plus maintenable.<br>
-                    <em>Impact attendu :</em> <span class="highlight-impact">Code évolutif et testable</span>
-                </p>
-            </div>
-
-
+    <div class="lessons-grid">
+        
+        <div class="lesson-card">
+            <strong>🧪 Tests automatisés découverts</strong>
+            <p>
+                <em>Sur ce projet :</em> Tests manuels uniquement (débutant en C++).<br>
+                <em>Acquis depuis :</em> Découverte de <strong>Google Test</strong> au Semestre 2. 
+                Appliqué sur projet Pathfinding avec 85% de couverture.<br>
+                <em>Standard actuel :</em> Tous mes projets C++ incluent tests unitaires dès le début.
+            </p>
         </div>
-    </section>
+
+        <div class="lesson-card">
+            <strong>⚡ Smart pointers maîtrisés</strong>
+            <p>
+                <em>Sur ce projet :</em> Allocation manuelle <code>new/delete</code> (cours POO basique).<br>
+                <em>Acquis depuis :</em> Cours C++ avancé (Semestre 3) → <code>std::unique_ptr</code>, RAII.<br>
+                <em>Standard actuel :</em> 100% smart pointers sur projets Unreal C++ (zéro fuite mémoire).
+            </p>
+        </div>
+
+        <div class="lesson-card">
+            <strong>📐 Architecture SOLID appliquée</strong>
+            <p>
+                <em>Sur ce projet :</em> Architecture monolithique (premier projet console).<br>
+                <em>Acquis depuis :</em> Formation Software Engineering (Semestre 3) → Principes SOLID.<br>
+                <em>Standard actuel :</em> Projets Unreal structurés en modules (Gameplay/AI/UI séparés).
+            </p>
+        </div>
+
+    </div>
+</section>
 
     <!-- Ce que j'ai appris -->
     <section class="project-section bg-dark">
@@ -377,7 +368,7 @@
             <div class="footer-section">
                 <h4 class="footer-heading">Projets phares</h4>
                 <ul class="footer-links">
-                    <li><a href="steampunk.html">Projet Steampunk</a></li>
+                    <li><a href="TransMontagne.html">Projet TransMontagne</a></li>
                     <li><a href="solitaire.html">Solitaire C++</a></li>
                     <li><a href="projets.html">Tous les projets →</a></li>
                 </ul>
