@@ -116,19 +116,10 @@
                     <span class="meta-value">Blueprint (principal) & Level Design</span>
                 </div>
             </div>
-
-            <div class="project-actions">
-                <a href="assets/projects/steampunk/steampunk-demo.zip" class="btn btn-primary" download>
-                    🎮 Télécharger démo jouable (350 MB)
-                </a>
-                <a href="#breakdown" class="btn btn-secondary">
-                    📊 Breakdown technique
-                </a>
-            </div>
         </div>
 
         <div class="project-hero__media">
-            <img src="assets/Blocking.webp" 
+            <img src="assets/projects/TransMontagne/manoir.webp" 
                  alt="Blockout niveau Trans Montagne avec plateformes et architecture" 
                  class="project-thumbnail"
                  loading="eager">
@@ -138,15 +129,12 @@
     <!-- Vidéo démo -->
     <section class="project-section">
         <h2>Démo gameplay</h2>
-        <div class="video-container">
-            <video controls poster="assets/projects/steampunk/thumbnail.webp" preload="metadata">
-                <source src="assets/projects/steampunk/gameplay-demo.mp4" type="video/mp4">
-                <track kind="captions" src="assets/projects/steampunk/captions.vtt" srclang="fr" label="Français">
+        <div class="video-container">   
+            <video controls poster="assets/projects/TransMontagne/train.webp" preload="metadata">
+                <source src="assets/projects/TransMontagne/Trailer.mp4" type="video/mp4">
+                <track kind="captions" src="assets/projects/TransMontagne/captions.vtt" srclang="fr" label="Français">
                 Votre navigateur ne supporte pas la vidéo HTML5.
             </video>
-            <p class="video-caption">
-                Extrait gameplay à ajouter (prévu). Montrera le hub-train, exploration et phases d'infiltration.
-            </p>
         </div>
     </section>
 
@@ -189,15 +177,18 @@
             <article class="challenge-card">
                 <div class="challenge-header">
                     <span class="challenge-number">01</span>
-                    <h3>Hub-train et navigation entre zones</h3>
+                    <h3>Système de sauvegarde & checkpoints</h3>
                 </div>
                 <div class="challenge-content">
                     <p>
-                        Conception d'un hub (wagon/train) servant de point d'accès aux différents niveaux selon l'avancement du joueur.
+                        Implémenter un système de sauvegarde robuste permettant de restaurer la progression du joueur 
+                        (position, objectifs complétés, états des niveaux) à travers les différentes zones.
                     </p>
                     <h4>Solution adoptée</h4>
                     <p>
-                        Système de progression simple qui débloque les niveaux depuis le hub, gestion des checkpoints et restauration via la sauvegarde.
+                        Utilisation du <strong>SaveGame</strong> d'Unreal avec sérialisation des données critiques 
+                        (position joueur, checkpoints validés, inventaire). Checkpoints stratégiquement placés 
+                        pour éviter la frustration lors des phases d'exploration.
                     </p>
                 </div>
             </article>
@@ -213,7 +204,8 @@
                     </p>
                     <h4>Solution adoptée</h4>
                     <p>
-                        Behavior Trees + détection par overlap/volume, NavMesh pour les déplacements dans les zones d'infiltration.
+                        <strong>Behavior Trees</strong> avec système de patrouille (waypoints) et détection par 
+                        perception (sight/hearing). NavMesh pour pathfinding automatique dans les zones d'infiltration.
                     </p>
                 </div>
             </article>
@@ -229,7 +221,9 @@
                     </p>
                     <h4>Solution adoptée</h4>
                     <p>
-                        Blockout itératif, placement d'indices visuels et checkpoints stratégiques pour éviter frustration.
+                        <strong>Blockout itératif</strong> avec playtests réguliers. Utilisation de la lumière, 
+                        des couleurs et du level design pour créer un <em>visual flow</em> naturel 
+                        guidant vers les points d'intérêt.
                     </p>
                 </div>
             </article>
@@ -237,78 +231,45 @@
         </div>
     </section>
 
-    <!-- GIFs animés (PLACEHOLDERS) -->
+    <!-- Aperçu des niveaux -->
     <section class="project-section">
-        <h2>Mécaniques en action</h2>
+        <h2>Aperçu des niveaux</h2>
         <p style="color: var(--text-light); margin-bottom: 2rem;">
-            Extraits courts à venir — GIFs/vidéos laissés en place pour illustration future.
+            Le jeu comporte <strong>3 niveaux distincts</strong> accessibles depuis le hub-train, 
+            chacun avec son ambiance et ses mécaniques spécifiques.
         </p>
         
         <div class="gallery-grid">
             <figure class="gallery-item">
-                <img src="assets/projects/steampunk/dash-combo.gif" 
-                     alt="Séquence technique (placeholder)" 
+                <img src="assets/projects/TransMontagne/manoir.webp" 
+                     alt="Niveau 1 - Zone d'exploration ouverte" 
                      loading="lazy"
                      class="zoomable">
-                <figcaption>Extrait à ajouter</figcaption>
+                <figcaption><strong>Niveau 1</strong> : Zone d'exploration ouverte</figcaption>
             </figure>
             
             <figure class="gallery-item">
-                <img src="assets/projects/steampunk/wallrun-jump.gif" 
-                     alt="Séquence technique (placeholder)" 
+                <img src="assets/projects/TransMontagne/entrepot.webp" 
+                     alt="Niveau 2 - Exploration verticale" 
                      loading="lazy"
                      class="zoomable">
-                <figcaption>Extrait à ajouter</figcaption>
+                <figcaption><strong>Niveau 2</strong> : Zone d'infiltration avec patrouilles ennemies</figcaption>
             </figure>
             
             <figure class="gallery-item">
-                <img src="assets/projects/steampunk/ai-combat.gif" 
-                     alt="Séquence IA (placeholder)" 
+                <img src="assets/projects/TransMontagne/ville.webp" 
+                     alt="Niveau 3 - Zone d'infiltration avec ennemis" 
                      loading="lazy"
                      class="zoomable">
-                <figcaption>Extrait à ajouter</figcaption>
-            </figure>
-        </div>
-    </section>
-
-    <!-- Progression visuelle -->
-    <section class="project-section">
-        <h2>Progression visuelle</h2>
-        <p style="color: var(--text-light); margin-bottom: 2rem;">
-            Illustration possible via blockouts et versions finales (tu as dit pouvoir retrouver ces images).
-        </p>
-        
-        <div class="gallery-grid">
-            <figure class="gallery-item">
-                <img src="assets/projects/steampunk/blockout-v1.webp" 
-                     alt="Blockout initial graybox" 
-                     loading="lazy"
-                     class="zoomable">
-                <figcaption><strong>Mois 1-2</strong> : Blockout graybox</figcaption>
+                <figcaption><strong>Niveau 3</strong> : Zone d'exploration ouverte</figcaption>
             </figure>
             
             <figure class="gallery-item">
-                <img src="assets/projects/steampunk/blockout-v2.webp" 
-                     alt="Assets 3D + Lighting basique" 
+                <img src="assets/projects/TransMontagne/trainHub.webp" 
+                     alt="Hub central - Train" 
                      loading="lazy"
                      class="zoomable">
-                <figcaption><strong>Mois 3-4</strong> : Assets & lighting</figcaption>
-            </figure>
-            
-            <figure class="gallery-item">
-                <img src="assets/projects/steampunk/final-zone1.webp" 
-                     alt="Zone intro finalisée" 
-                     loading="lazy"
-                     class="zoomable">
-                <figcaption><strong>Mois 5-6</strong> : Polish zone intro</figcaption>
-            </figure>
-            
-            <figure class="gallery-item">
-                <img src="assets/projects/steampunk/final-zone2.webp" 
-                     alt="Zone finale" 
-                     loading="lazy"
-                     class="zoomable">
-                <figcaption><strong>Final</strong> : Zone d'infiltration / exploration</figcaption>
+                <figcaption><strong>Hub</strong> : Train central (point d'accès aux niveaux)</figcaption>
             </figure>
         </div>
     </section>
@@ -329,10 +290,11 @@
             <div class="skill-category">
                 <h3>Systèmes & Level Design</h3>
                 <ul class="tags">
+                    <li class="tag">SaveGame System</li>
                     <li class="tag">NavMesh / Pathfinding</li>
-                    <li class="tag">Checkpoints & Save System</li>
+                    <li class="tag">Checkpoints & Progression</li>
                     <li class="tag">Blockout iteratif</li>
-                    <li class="tag">UI / UX</li>
+                    <li class="tag">Visual Flow & Composition</li>
                 </ul>
             </div>
         </div>
@@ -343,23 +305,26 @@
         <h2>Ce que ce projet m'a appris</h2>
         <div class="lessons-grid">
             <div class="lesson-card">
+                <strong>Sauvegarde robuste = meilleure UX</strong>
+                <p>
+                    Un système de sauvegarde bien pensé avec checkpoints stratégiques réduit drastiquement 
+                    la frustration et améliore l'engagement.
+                </p>
+            </div>
+
+            <div class="lesson-card">
                 <strong>Blockout avant esthétique</strong>
                 <p>
-                    Un blockout jouable tôt a permis d'itérer sur le flow sans être distrait par les visuels.
+                    Créer un blockout jouable tôt permet d'itérer rapidement sur le level design 
+                    sans être distrait par les visuels.
                 </p>
             </div>
 
             <div class="lesson-card">
-                <strong>Gestion de la progression</strong>
+                <strong>Behavior Trees modulaires</strong>
                 <p>
-                    Concevoir un hub (train) facilite la navigation entre zones et rend la progression lisible.
-                </p>
-            </div>
-
-            <div class="lesson-card">
-                <strong>Sauvegarde & robustesse</strong>
-                <p>
-                    Mettre en place un système de sauvegarde et des checkpoints améliore l'expérience des joueurs.
+                    Structurer l'IA avec des Behavior Trees réutilisables facilite la maintenance 
+                    et l'ajout de nouveaux comportements.
                 </p>
             </div>
         </div>
@@ -397,7 +362,6 @@
         </div>
     </section>
 </main>
-
     <footer class="site-footer">
         <div class="footer-content">
             
