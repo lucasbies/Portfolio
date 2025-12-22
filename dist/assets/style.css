@@ -18,7 +18,10 @@
    15. PROJECT DETAIL
    16. FOOTER
    17. RESPONSIVE
-   18. SECTION AMÉLIORATIONS FUTURES
+   18. CARDS PRÉSENTATION ABOUT
+   19. EXPÉRIENCES COLORÉES
+   20. LANGUES & CENTRES D'INTÉRÊT
+   21. SECTION AMÉLIORATIONS FUTURES
 ======================================== */
 
 /* ========================================
@@ -31,13 +34,13 @@
     --primary-light: #f3e8ff;
     --primary-border: #e9d5ff;
     
-    /* Couleurs texte */
+    /* Couleurs texte (mode clair) */
     --text-dark: #2C3E50;
     --text-medium: #404040;
-    --text-light: #666;
-    --text-lighter: #5a5a5a; /* ✅ CORRIGÉ : meilleur contraste (ratio 7:1) */
+    --text-light: #595959; /* ✅ CORRIGÉ : #666 → #595959 (ratio 7.04:1) */
+    --text-lighter: #525252; /* ✅ CORRIGÉ : #5a5a5a → #525252 (ratio 7.52:1) */
     
-    /* Couleurs fond */
+    /* Couleurs fond (mode clair) */
     --bg-main: #F0F0F0;
     --bg-white: #fff;
     --bg-light: #f8f9fa;
@@ -60,6 +63,33 @@
     --shadow-md: 0 8px 24px rgba(0,0,0,0.08);
     --shadow-lg: 0 12px 32px rgba(0,0,0,0.15);
     --shadow-hover: 0 10px 28px rgba(0,0,0,0.12);
+}
+
+/* ========================================
+   MODE SOMBRE
+======================================== */
+[data-theme="dark"] {
+    /* Couleurs texte (mode sombre) */
+    --text-dark: #E0E1E6;
+    --text-medium: #C9CACE;
+    --text-light: #A8A9AE;
+    --text-lighter: #B0B1B6;
+    
+    /* Couleurs fond (mode sombre) */
+    --bg-main: #1A1B26;
+    --bg-white: #24252F;
+    --bg-light: #2D2E3A;
+    --bg-gradient: linear-gradient(180deg, #24252F 0%, #1A1B26 100%);
+    
+    /* Ombres adaptées */
+    --shadow-sm: 0 4px 12px rgba(0,0,0,0.3);
+    --shadow-md: 0 8px 24px rgba(0,0,0,0.4);
+    --shadow-lg: 0 12px 32px rgba(0,0,0,0.5);
+    --shadow-hover: 0 10px 28px rgba(0,0,0,0.45);
+    
+    /* Ajustements primaires pour meilleur contraste */
+    --primary-light: rgba(144, 80, 224, 0.15);
+    --primary-border: rgba(144, 80, 224, 0.3);
 }
 
 /* ========================================
@@ -246,6 +276,52 @@ a {
 .nav-toggle[aria-expanded="true"] .hamburger::after {
     transform: rotate(-45deg);
     bottom: 0;
+}
+
+/* Toggle Dark Mode */
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 8px;
+    transition: var(--transition-base);
+    color: var(--text-medium);
+}
+
+.theme-toggle:hover {
+    background: var(--bg-light);
+    color: var(--primary);
+}
+
+.theme-toggle svg {
+    width: 20px;
+    height: 20px;
+    transition: var(--transition-base);
+}
+
+.theme-toggle:hover svg {
+    transform: rotate(20deg);
+}
+
+/* Icône soleil visible en mode sombre, lune en mode clair */
+[data-theme="dark"] .theme-toggle .icon-sun {
+    display: block;
+}
+
+[data-theme="dark"] .theme-toggle .icon-moon {
+    display: none;
+}
+
+.theme-toggle .icon-sun {
+    display: none;
+}
+
+.theme-toggle .icon-moon {
+    display: block;
 }
 
 /* ========================================
@@ -2926,13 +3002,17 @@ a.contact-link:hover {
 
 .footer-bottom {
     padding: 2rem 0;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     color: rgba(255, 255, 255, 0.8);
     font-size: 0.9rem;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .footer-bottom p {
-    margin: 0.5rem 0;
+    margin: 0;
 }
 
 .footer-bottom a {
@@ -3768,6 +3848,500 @@ a.contact-link:hover {
 }
 
 /* ========================================
+   18. CARDS PRÉSENTATION ABOUT
+======================================== */
+
+/* Cards Présentation avec icônes */
+.about-intro-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.intro-card {
+    background: var(--bg-white);
+    border: 2px solid var(--primary);
+    color: var(--text-medium);
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: var(--shadow-md);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+}
+
+.intro-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(144, 80, 224, 0.35);
+}
+
+.intro-card .card-icon {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.intro-card .card-icon svg {
+    stroke: white;
+}
+
+.intro-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.intro-card p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+}
+
+.intro-card ul {
+    margin-top: 1rem;
+    padding-left: 1.5rem;
+    list-style: none;
+}
+
+.intro-card ul li {
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
+    position: relative;
+    padding-left: 0.5rem;
+}
+
+.intro-card ul li::before {
+    content: "→";
+    position: absolute;
+    left: -1rem;
+    font-weight: bold;
+}
+
+.intro-card .text-sm {
+    font-size: 0.85rem;
+    margin-top: 0.75rem;
+    opacity: 0.85;
+    font-style: italic;
+}
+
+/* Citation Judo mise en valeur */
+.about-quote-highlight {
+    background: var(--bg-white);
+    border: 3px solid var(--primary);
+    border-left: 6px solid var(--primary);
+    color: var(--text-medium);
+    padding: 2.5rem;
+    border-radius: 16px;
+    margin-top: 2.5rem;
+    position: relative;
+    box-shadow: var(--shadow-md);
+}
+
+.about-quote-highlight::before {
+    display: none;
+}
+
+.about-quote-highlight .quote-icon {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    opacity: 0.15;
+    stroke: var(--primary);
+}
+
+.about-quote-highlight p {
+    font-size: 1.15rem;
+    font-style: italic;
+    line-height: 1.8;
+    margin: 0;
+    padding-left: 3.5rem;
+    position: relative;
+    z-index: 1;
+    color: var(--text-light);
+}
+
+/* Responsive Cards Présentation */
+@media (max-width: 768px) {
+    .about-intro-cards {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .intro-card {
+        padding: 1.5rem;
+    }
+    
+    .about-quote-highlight {
+        padding: 1.5rem;
+    }
+    
+    .about-quote-highlight p {
+        font-size: 1rem;
+        padding-left: 0;
+    }
+    
+    .about-quote-highlight .quote-icon {
+        display: none;
+    }
+}
+
+/* ========================================
+   19. EXPÉRIENCES COLORÉES
+======================================== */
+
+/* Expériences avec bordures colorées et tags */
+.experiences-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.experience-card {
+    background: var(--bg-light);
+    border-radius: 16px;
+    padding: 2rem;
+    border-left: 5px solid transparent;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.experience-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+/* Couleurs par catégorie - TOUT EN VIOLET */
+.experience-education {
+    border-left-color: var(--primary);
+}
+
+.experience-education:hover {
+    box-shadow: 0 12px 28px rgba(144, 80, 224, 0.2);
+}
+
+.experience-education .experience-icon {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+}
+
+.experience-retail {
+    border-left-color: var(--primary);
+}
+
+.experience-retail:hover {
+    box-shadow: 0 12px 28px rgba(144, 80, 224, 0.2);
+}
+
+.experience-retail .experience-icon {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+}
+
+.experience-social {
+    border-left-color: var(--primary);
+}
+
+.experience-social:hover {
+    box-shadow: 0 12px 28px rgba(144, 80, 224, 0.2);
+}
+
+.experience-social .experience-icon {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+}
+
+.experience-sport {
+    border-left-color: var(--primary);
+}
+
+.experience-sport:hover {
+    box-shadow: 0 12px 28px rgba(144, 80, 224, 0.2);
+}
+
+.experience-sport .experience-icon {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+}
+
+/* Header expérience */
+.experience-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+.experience-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.experience-icon svg {
+    stroke: white;
+}
+
+.experience-header h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin: 0 0 0.5rem 0;
+}
+
+.experience-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    font-size: 0.875rem;
+}
+
+.meta-company {
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+.meta-date {
+    color: var(--text-lighter);
+    font-size: 0.8rem;
+}
+
+/* Description expérience */
+.experience-description {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--text-light);
+    margin-bottom: 1rem;
+}
+
+/* Tags soft skills par expérience */
+.experience-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-top: 1.25rem;
+}
+
+.experience-tags .tag {
+    padding: 0.35rem 0.85rem;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.experience-education .experience-tags .tag,
+.experience-retail .experience-tags .tag,
+.experience-social .experience-tags .tag,
+.experience-sport .experience-tags .tag {
+    background: rgba(144, 80, 224, 0.1);
+    color: var(--primary);
+}
+
+.experience-education .experience-tags .tag:hover,
+.experience-retail .experience-tags .tag:hover,
+.experience-social .experience-tags .tag:hover,
+.experience-sport .experience-tags .tag:hover {
+    background: rgba(144, 80, 224, 0.2);
+}
+
+/* Responsive Expériences */
+@media (max-width: 768px) {
+    .experiences-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .experience-card {
+        padding: 1.5rem;
+    }
+    
+    .experience-header {
+        gap: 1rem;
+    }
+    
+    .experience-icon {
+        width: 44px;
+        height: 44px;
+    }
+}
+
+/* ========================================
+   20. LANGUES & CENTRES D'INTÉRÊT
+======================================== */
+
+/* Colonnes modernes Langues/Hobbies */
+.about-two-columns-modern {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.about-column-card {
+    background: var(--bg-light);
+    border-radius: 16px;
+    padding: 2rem;
+    border: 1px solid #e5e7eb;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.about-column-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    border-color: #d1d5db;
+    transform: translateY(-4px);
+}
+
+.column-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.75rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid rgba(144, 80, 224, 0.2);
+}
+
+.column-header .header-icon {
+    width: 44px;
+    height: 44px;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(144, 80, 224, 0.25);
+}
+
+.column-header .header-icon svg {
+    stroke: white;
+}
+
+.column-header h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin: 0;
+}
+
+/* Liste moderne */
+.modern-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.modern-list-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(144, 80, 224, 0.15);
+    transition: all 0.2s ease;
+}
+
+.modern-list-item:hover {
+    background: var(--bg-light);
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    border-radius: 8px;
+}
+
+.modern-list-item:last-child {
+    border-bottom: none;
+}
+
+.modern-list-item .item-icon {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(144, 80, 224, 0.3);
+}
+
+/* Icônes langues - variations violet (petits cercles) */
+.item-icon.lang-en {
+    background: var(--primary);
+}
+
+.item-icon.lang-es {
+    background: var(--accent);
+}
+
+.item-icon.lang-fr {
+    background: #b794f6;
+}
+
+/* Icônes hobbies - variations violet (petits cercles) */
+.item-icon.hobby-sport {
+    background: var(--primary);
+}
+
+.item-icon.hobby-gaming {
+    background: var(--accent);
+}
+
+.item-icon.hobby-tech {
+    background: #b794f6;
+}
+
+.item-icon.hobby-outdoor {
+    background: #d8b4fe;
+}
+
+.item-icon.hobby-creative {
+    background: #d946ef;
+}
+
+/* Contenu item */
+.item-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    flex: 1;
+}
+
+.item-title {
+    font-weight: 600;
+    color: var(--text-dark);
+    font-size: 0.95rem;
+}
+
+.item-level {
+    font-size: 0.8rem;
+    color: var(--text-light);
+}
+
+/* Responsive Langues/Hobbies */
+@media (max-width: 768px) {
+    .about-two-columns-modern {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .about-column-card {
+        padding: 1.5rem;
+    }
+    
+    .column-header {
+        margin-bottom: 1.25rem;
+    }
+    
+    .modern-list-item {
+        padding: 0.75rem 0;
+    }
+}
+
+/* ========================================
    SECTION AMÉLIORATIONS FUTURES
 ======================================== */
 .improvements-section {
@@ -4077,5 +4651,67 @@ a.contact-link:hover {
     font-weight: 700;
     font-size: 0.9rem;
     margin-top: 0.3rem;
+}
+
+/* ========================================
+   22. ACCESSIBILITÉ WCAG 2.2
+======================================== */
+
+/* ✅ Respecter prefers-reduced-motion (WCAG 2.2.3) */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    
+    /* Désactiver vidéo background hero */
+    .hero-video {
+        display: none;
+    }
+    
+    /* Remplacer par gradient statique */
+    .hero-background::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, rgba(44, 62, 80, 0.85), rgba(144, 80, 224, 0.75));
+        z-index: 1;
+    }
+    
+    /* Désactiver animations keyframes */
+    .fade-in,
+    .slide-in-left,
+    .slide-in-right,
+    .scale-in,
+    .hero-content {
+        animation: none !important;
+    }
+    
+    /* Désactiver scroll indicator bounce */
+    .scroll-indicator {
+        animation: none;
+    }
+    
+    /* Désactiver transforms hover (sauf focus clavier) */
+    .project-card:hover,
+    .btn:hover,
+    .nav-link:hover,
+    .experience-card:hover,
+    .skill-category-card:hover {
+        transform: none !important;
+    }
+    
+    /* Garder focus visible pour accessibilité clavier */
+    *:focus-visible {
+        outline: 3px solid var(--primary);
+        outline-offset: 2px;
+    }
 }
 

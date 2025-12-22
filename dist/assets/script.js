@@ -6,6 +6,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     initMobileMenu();
     initActiveNavLink();
+    initThemeToggle();
 });
 
 function initMobileMenu() {
@@ -35,6 +36,29 @@ function initActiveNavLink() {
         if (link.getAttribute('href') === currentPage) {
             link.classList.add('active');
         }
+    });
+}
+
+// ✅ DARK MODE TOGGLE
+function initThemeToggle() {
+    const themeToggles = document.querySelectorAll('.theme-toggle');
+    
+    // Charger le thème sauvegardé ou détecter la préférence système
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const initialTheme = savedTheme || (prefersDark ? 'dark' : 'light');
+    
+    document.documentElement.setAttribute('data-theme', initialTheme);
+    
+    // Appliquer le toggle à tous les boutons (header + footer)
+    themeToggles.forEach(toggle => {
+        toggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        });
     });
 }
 
