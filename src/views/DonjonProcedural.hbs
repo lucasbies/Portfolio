@@ -180,6 +180,87 @@
         </div>
     </section>
 
+    <!-- Exemple de code -->
+    <section class="project-section">
+        <h2>Exemple de code</h2>
+        <p style="color: var(--text-light); max-width: 800px; margin-bottom: 2rem; line-height: 1.8;">
+            Extrait du générateur principal montrant la logique de placement des salles et la détection de collisions via Bounding Boxes.
+        </p>
+        <div class="code-showcase">
+            <div class="code-showcase-header">
+                <h3>📄 DungeonGenerator.cs — GenerateDungeon()</h3>
+                <a href="https://gist.github.com/lucasbies/0c3b7f9d1ee8bbeb84476f29dc20ecc6" 
+                   class="code-showcase-link" 
+                   target="_blank" 
+                   rel="noopener noreferrer">
+                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                    </svg>
+                    Voir sur GitHub
+                </a>
+            </div>
+            <pre><code><span class="keyword">private void</span> <span class="function">GenerateDungeon</span>()
+{
+    <span class="comment">// Initialisation du générateur avec le seed pour reproductibilité</span>
+    Random.<span class="function">InitState</span>(seed);
+    
+    <span class="comment">// Création de la première salle (point de départ)</span>
+    <span class="type">GameObject</span> firstRoom = <span class="function">InstantiateRoom</span>(<span class="type">Vector3</span>.zero);
+    rooms.<span class="function">Add</span>(firstRoom);
+    
+    <span class="comment">// Récupération des portes disponibles pour la génération</span>
+    <span class="type">DataRoom</span> firstData = firstRoom.<span class="function">GetComponent</span>&lt;<span class="type">DataRoom</span>&gt;();
+    availableDoors.<span class="function">AddRange</span>(firstData.doors);
+    
+    <span class="comment">// Génération des salles suivantes</span>
+    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; numberOfRooms - <span class="number">1</span>; i++)
+    {
+        <span class="keyword">if</span> (availableDoors.Count == <span class="number">0</span>)
+            <span class="keyword">break</span>;
+            
+        <span class="comment">// Sélection aléatoire d'une porte disponible</span>
+        <span class="keyword">int</span> doorIndex = Random.<span class="function">Range</span>(<span class="number">0</span>, availableDoors.Count);
+        <span class="type">Transform</span> selectedDoor = availableDoors[doorIndex];
+        
+        <span class="comment">// Calcul de la position et rotation pour la nouvelle salle</span>
+        <span class="type">Vector3</span> newRoomPosition = selectedDoor.position + selectedDoor.forward * roomSpacing;
+        <span class="type">Quaternion</span> newRoomRotation = selectedDoor.rotation * <span class="type">Quaternion</span>.<span class="function">Euler</span>(<span class="number">0</span>, <span class="number">180</span>, <span class="number">0</span>);
+        
+        <span class="comment">// Vérification des collisions avec Bounding Boxes</span>
+        <span class="keyword">bool</span> hasCollision = <span class="keyword">false</span>;
+        <span class="keyword">foreach</span> (<span class="type">GameObject</span> existingRoom <span class="keyword">in</span> rooms)
+        {
+            <span class="type">BoxCollider</span> existingBounds = existingRoom.<span class="function">GetComponent</span>&lt;<span class="type">BoxCollider</span>&gt;();
+            <span class="type">Bounds</span> newBounds = <span class="keyword">new</span> <span class="type">Bounds</span>(newRoomPosition, roomSize);
+            
+            <span class="keyword">if</span> (existingBounds.bounds.<span class="function">Intersects</span>(newBounds))
+            {
+                hasCollision = <span class="keyword">true</span>;
+                <span class="keyword">break</span>;
+            }
+        }
+        
+        <span class="comment">// Placement de la salle si pas de collision</span>
+        <span class="keyword">if</span> (!hasCollision)
+        {
+            <span class="type">GameObject</span> newRoom = <span class="function">InstantiateRoom</span>(newRoomPosition, newRoomRotation);
+            rooms.<span class="function">Add</span>(newRoom);
+            
+            <span class="comment">// Ajout des nouvelles portes disponibles</span>
+            <span class="type">DataRoom</span> newData = newRoom.<span class="function">GetComponent</span>&lt;<span class="type">DataRoom</span>&gt;();
+            availableDoors.<span class="function">AddRange</span>(newData.doors);
+        }
+        
+        <span class="comment">// Retrait de la porte utilisée</span>
+        availableDoors.<span class="function">RemoveAt</span>(doorIndex);
+    }
+    
+    <span class="comment">// Spawn des ennemis dans les salles générées</span>
+    <span class="function">SpawnEnemiesInRooms</span>();
+}</code></pre>
+        </div>
+    </section>
+
     <!-- Compétences développées -->
     <section class="project-section bg-dark">
         <h2>Compétences développées</h2>
