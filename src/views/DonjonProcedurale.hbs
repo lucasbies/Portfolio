@@ -1,0 +1,288 @@
+<main class="project-detail">
+    <!-- Hero du projet -->
+    <section class="project-hero">
+        <div class="project-hero__content">
+            <span class="project-tag">Projet Technique • Unity</span>
+            <h1>Générateur de Donjons Procédural</h1>
+            <p class="project-subtitle">
+                Outil technique de génération procédurale en Unity 6000.2.7f2. 
+                Système autonome avec seed reproductible, détection de collisions sans moteur physique et interface de paramétrage temps réel.
+            </p>
+            
+            <div class="project-meta">
+                <div class="meta-item">
+                    <span class="meta-label">Durée</span>
+                    <span class="meta-value">5 jours</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Moteur</span>
+                    <span class="meta-value">Unity 6000.2.7f2</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Rôle</span>
+                    <span class="meta-value">Développeur solo</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Contexte</span>
+                    <span class="meta-value">Projet technique personnel</span>
+                </div>
+            </div>
+
+            <div class="project-actions">
+                <a href="https://github.com/lucasbies/Genereteur-de-donjon-procedural---Unity" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    Voir le code source
+                </a>
+            </div>
+        </div>
+
+        <div class="project-hero__media">
+            <img src="assets/projects/DonjonProcedurale/dungeon.webp" 
+                 alt="Vue d'un donjon généré procéduralement avec salles interconnectées" 
+                 class="project-thumbnail"
+                 loading="eager">
+        </div>
+    </section>
+
+    <!-- Vue d'ensemble -->
+    <section class="project-section">
+        <h2>Vue d'ensemble</h2>
+        <div class="overview-grid">
+            <div class="overview-card">
+                <h3>🎯 Objectif</h3>
+                <p>
+                    Explorer et maîtriser la génération procédurale en créant un outil technique autonome 
+                    capable de générer des donjons reproductibles avec paramètres modifiables en temps réel.
+                </p>
+            </div>
+            <div class="overview-card">
+                <h3>🔧 Technologies</h3>
+                <ul class="tech-list">
+                    <li><strong>Unity 6000.2.7f2</strong> : Moteur de jeu</li>
+                    <li><strong>C#</strong> : Scripting algorithmique</li>
+                    <li><strong>Génération procédurale</strong> : Seed + probabilités</li>
+                    <li><strong>UI Unity</strong> : Canvas pour paramétrage</li>
+                </ul>
+            </div>
+            <div class="overview-card">
+                <h3>📊 Résultats</h3>
+                <ul class="metrics-list">
+                    <li>✅ Génération reproductible via seed</li>
+                    <li>✅ Détection collisions sans moteur physique</li>
+                    <li>✅ Interface paramétrage temps réel</li>
+                    <li>✅ Caméra free-fly debug</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Défis techniques -->
+    <section class="project-section">
+        <h2>Défis techniques rencontrés</h2>
+        <div class="challenges-grid">
+            <article class="challenge-card">
+                <div class="challenge-header">
+                    <span class="challenge-number">01</span>
+                    <h3>Détection collision sans moteur physique</h3>
+                </div>
+                <div class="challenge-content">
+                    <p>
+                        Détecter les collisions entre salles pendant la génération sans utiliser le moteur physique 
+                        (qui nécessite une frame pour se mettre à jour).
+                    </p>
+                    <h4>Solution adoptée</h4>
+                    <p>
+                        Utilisation de <strong>Bounding Boxes manuelles</strong> avec <code>BoxCollider.bounds</code> 
+                        et <code>Bounds.Intersects()</code> pour validation instantanée du placement.
+                    </p>
+                </div>
+            </article>
+
+            <article class="challenge-card">
+                <div class="challenge-header">
+                    <span class="challenge-number">02</span>
+                    <h3>Génération reproductible et contrôlable</h3>
+                </div>
+                <div class="challenge-content">
+                    <p>
+                        Permettre la reproduction exacte d'un donjon et le contrôle des probabilités d'apparition 
+                        des différents types de salles.
+                    </p>
+                    <h4>Solution adoptée</h4>
+                    <p>
+                        Système de <strong>seed</strong> avec <code>Random.InitState()</code> pour reproductibilité, 
+                        et structure <strong>RoomInstance</strong> avec probabilités pondérées.
+                    </p>
+                </div>
+            </article>
+
+            <article class="challenge-card">
+                <div class="challenge-header">
+                    <span class="challenge-number">03</span>
+                    <h3>Architecture modulaire et extensible</h3>
+                </div>
+                <div class="challenge-content">
+                    <p>
+                        Structurer le code pour faciliter l'ajout de nouveaux types de salles, règles de placement 
+                        et mécaniques sans refactoring massif.
+                    </p>
+                    <h4>Solution adoptée</h4>
+                    <p>
+                        Séparation claire : <strong>DungeonGenerator</strong> (logique), <strong>DataRoom</strong> (données), 
+                        <strong>ManagerUI</strong> (interface), avec système de prefabs configurables.
+                    </p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Architecture -->
+    <section class="project-section">
+        <h2>Architecture du système</h2>
+        <div class="overview-grid">
+            <div class="overview-card">
+                <h3>DungeonGenerator</h3>
+                <p>
+                    Classe centrale gérant le processus complet : seed, placement procédural, 
+                    gestion des portes disponibles, spawn d'ennemis et détection de collisions via Bounding Boxes.
+                </p>
+            </div>
+            <div class="overview-card">
+                <h3>DataRoom</h3>
+                <p>
+                    Représente une salle individuelle avec positions des portes, points de spawn ennemis/pièces, 
+                    BoxCollider pour collision et logique de spawn.
+                </p>
+            </div>
+            <div class="overview-card">
+                <h3>RoomInstance</h3>
+                <p>
+                    Structure définissant les prefabs de salles avec leur probabilité d'apparition 
+                    pour un contrôle fin de la génération.
+                </p>
+            </div>
+            <div class="overview-card">
+                <h3>ManagerUI</h3>
+                <p>
+                    Gère l'interface utilisateur pour modifier dynamiquement les paramètres 
+                    (salles, ennemis, seed) et régénérer le donjon en temps réel.
+                </p>
+            </div>
+            <div class="overview-card">
+                <h3>FreeFlyCamera</h3>
+                <p>
+                    Caméra de déplacement libre servant à l'exploration du donjon 
+                    et au debug, avec contrôle rotation + vitesse.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compétences développées -->
+    <section class="project-section bg-dark">
+        <h2>Compétences développées</h2>
+        <div class="skills-acquired">
+            <div class="skill-category">
+                <h3>Moteur & Langages</h3>
+                <ul class="tags">
+                    <li class="tag">Unity 6000.2.7f2</li>
+                    <li class="tag">C#</li>
+                    <li class="tag">UI Unity (Canvas)</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Systèmes & Architecture</h3>
+                <ul class="tags">
+                    <li class="tag">Génération procédurale</li>
+                    <li class="tag">Algorithmique spatiale</li>
+                    <li class="tag">Systèmes probabilistes</li>
+                    <li class="tag">Bounding Boxes</li>
+                    <li class="tag">Debug tools</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ce que ce projet m'a appris -->
+    <section class="project-section">
+        <h2>Ce que ce projet m'a appris</h2>
+        <div class="lessons-grid">
+            <div class="lesson-card">
+                <strong>Génération procédurale maîtrisée</strong>
+                <p>
+                    Comprendre les mécaniques de seed, probabilités pondérées et reproductibilité 
+                    est fondamental pour créer des niveaux infinis.
+                </p>
+            </div>
+
+            <div class="lesson-card">
+                <strong>Détection de collisions custom</strong>
+                <p>
+                    Ne pas dépendre du moteur physique permet un contrôle total et des performances optimales 
+                    lors de la génération procédurale.
+                </p>
+            </div>
+
+            <div class="lesson-card">
+                <strong>Outils de debug essentiels</strong>
+                <p>
+                    Créer des outils de visualisation et de paramétrage temps réel accélère drastiquement 
+                    le développement et le tuning algorithmique.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Améliorations possibles -->
+    <section class="project-section bg-dark">
+        <h2>Améliorations possibles</h2>
+        <div class="lessons-grid">
+            <div class="lesson-card">
+                <strong>Layouts non orthogonaux</strong>
+                <p>Génération de donjons avec angles et formes organiques au lieu de grille rectangulaire.</p>
+            </div>
+            <div class="lesson-card">
+                <strong>Contraintes avancées</strong>
+                <p>Système de règles entre salles (boss après X salles, chemin critique obligatoire).</p>
+            </div>
+            <div class="lesson-card">
+                <strong>Sauvegarde configurations</strong>
+                <p>Export/import de seeds et paramètres pour partage et tests reproductibles.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Autres projets -->
+    <section class="project-section">
+        <h2>Projets similaires</h2>
+        <div class="related-projects">
+            <a href="OverRule.html" class="related-card">
+                <img src="assets/projects/OverRule/OverRule.webp" alt="Jeu multiplayer Unity Over Rule" loading="lazy">
+                <h3>Over Rule</h3>
+                <p>Unity • C# • Multiplayer</p>
+            </a>
+            <a href="solitaire.html" class="related-card">
+                <img src="assets/Solitaire.webp" alt="Interface console Solitaire C++" loading="lazy">
+                <h3>Solitaire Console C++</h3>
+                <p>POO • C++ 17 • Logique de jeu</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- CTA final -->
+    <section class="project-cta">
+        <div class="cta-content">
+            <h2>Intéressé par mon profil ?</h2>
+            <p>
+                Je recherche un <strong>stage Gameplay Programmer</strong> de 6 mois (été 2026).
+                Disponible pour discuter de vos projets Unity/C#/génération procédurale.
+            </p>
+            <div class="cta-actions">
+                <a href="contact.html" class="btn btn-primary">Me contacter</a>
+                <a href="projets.html" class="btn btn-secondary">Voir tous mes projets</a>
+            </div>
+        </div>
+    </section>
+</main>

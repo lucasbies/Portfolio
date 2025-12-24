@@ -98,6 +98,17 @@ const pages = [
             image: 'https://lucasbies.github.io/Portfolio/assets/og-image.webp',
             type: 'website'
         }
+    },
+    {
+        template: 'DonjonProcedurale.hbs',
+        output: 'DonjonProcedurale.html',
+        meta: {
+            title: 'Donjon Procedurale | Lucas Bieszczad - Gameplay Programmer',
+            description: 'Donjon procédural généré avec Unity 6, mettant en œuvre des algorithmes de génération procédurale pour des environnements de jeu dynamiques.',
+            url: 'https://lucasbies.github.io/Portfolio/DonjonProcedurale.html',
+            image: 'https://lucasbies.github.io/Portfolio/assets/og-image.webp',
+            type: 'article'
+        }
     }
 ];
 
