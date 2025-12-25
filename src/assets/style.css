@@ -709,17 +709,24 @@ a {
 .story-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    gap: 0rem;
     align-items: center;
 }
 
 .story-media {
     position: relative;
+    max-width: 400px;
+}
+
+.story-media img {
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: var(--shadow-lg);
 }
 
 .story-image {
     width: 100%;
-    border-radius: 12px;
+    border-radius: 16px;
     box-shadow: var(--shadow-lg);
 }
 
