@@ -3350,14 +3350,24 @@ a.contact-link:hover {
         padding: 3rem 1rem;
     }
 
-    /* Story Section Mobile */
+    /* Story Section Mobile - FIX COMPLET */
+    .story-section {
+        padding: 3rem 1rem;
+        max-width: 100%;
+        width: 100%;
+        overflow: hidden;
+    }
+
     .story-container {
         grid-template-columns: 1fr;
         gap: 2rem;
+        width: 100%;
+        max-width: 100%;
     }
 
     .story-media {
         order: 1;
+        width: 100%;
     }
 
     .story-content {
@@ -3365,12 +3375,12 @@ a.contact-link:hover {
         width: 100%;
         max-width: 100%;
         min-width: 0;
-        overflow-wrap: break-word;
     }
 
     .story-media img {
         max-width: 100%;
         height: auto;
+        width: 100%;
     }
 
     .story-text {
@@ -3382,16 +3392,15 @@ a.contact-link:hover {
     .story-text p {
         font-size: 1rem;
         margin-bottom: 1rem;
-        word-wrap: break-word;
+        word-break: break-word;
         overflow-wrap: break-word;
-        white-space: normal;
         width: 100%;
         max-width: 100%;
     }
 
     .story-title {
         font-size: 1.8rem;
-        word-wrap: break-word;
+        word-break: break-word;
     }
 
     /* Projects Grid */
