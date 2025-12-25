@@ -3362,6 +3362,10 @@ a.contact-link:hover {
 
     .story-content {
         order: 2;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        overflow-wrap: break-word;
     }
 
     .story-media img {
@@ -3372,6 +3376,7 @@ a.contact-link:hover {
     .story-text {
         width: 100%;
         max-width: 100%;
+        min-width: 0;
     }
 
     .story-text p {
@@ -3380,10 +3385,13 @@ a.contact-link:hover {
         word-wrap: break-word;
         overflow-wrap: break-word;
         white-space: normal;
+        width: 100%;
+        max-width: 100%;
     }
 
     .story-title {
         font-size: 1.8rem;
+        word-wrap: break-word;
     }
 
     /* Projects Grid */
