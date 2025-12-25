@@ -740,7 +740,7 @@ a {
 }
 
 .story-text p {
-    color: #555;
+    color: var(--text-light);
     line-height: 1.8;
     margin-bottom: 1.2rem;
 }
