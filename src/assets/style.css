@@ -3352,25 +3352,29 @@ a.contact-link:hover {
 
     /* Story Section Mobile - FIX COMPLET */
     .story-section {
-        padding: 2rem 1rem;
+        padding: 2rem 0.75rem;
         max-width: 100vw;
-        width: 100%;
+        width: 100vw;
         overflow-x: hidden;
+        box-sizing: border-box;
     }
 
     .story-container {
         display: flex;
         flex-direction: column;
-        gap: 2rem;
+        gap: 1.5rem;
         width: 100%;
         max-width: 100%;
         padding: 0;
+        margin: 0;
+        box-sizing: border-box;
     }
 
     .story-media {
         order: 1;
         width: 100%;
         margin: 0;
+        padding: 0;
     }
 
     .story-content {
@@ -3379,6 +3383,7 @@ a.contact-link:hover {
         max-width: 100%;
         min-width: 0;
         padding: 0;
+        margin: 0;
         box-sizing: border-box;
     }
 
@@ -3389,33 +3394,46 @@ a.contact-link:hover {
         display: block;
     }
 
+    .story-label {
+        display: block;
+        margin-bottom: 0.8rem;
+        font-size: 0.85rem;
+    }
+
+    .story-title {
+        font-size: 1.5rem;
+        word-break: break-word;
+        margin-bottom: 1rem;
+        line-height: 1.3;
+    }
+
     .story-text {
         width: 100%;
         max-width: 100%;
         min-width: 0;
         padding: 0;
+        margin: 0 0 1.5rem 0;
     }
 
     .story-text p {
-        font-size: 1rem;
+        font-size: 0.95rem;
         line-height: 1.6;
         margin-bottom: 1rem;
         word-break: break-word;
         overflow-wrap: break-word;
+        hyphens: auto;
         width: 100%;
         max-width: 100%;
         padding: 0;
+        margin-left: 0;
+        margin-right: 0;
     }
 
-    .story-title {
-        font-size: 1.8rem;
-        word-break: break-word;
-        margin-bottom: 1rem;
-    }
-
-    .story-label {
-        display: block;
-        margin-bottom: 0.8rem;
+    .story-content .btn {
+        width: fit-content;
+        max-width: 100%;
+        font-size: 0.9rem;
+        padding: 0.75rem 1.2rem;
     }
 
     /* Projects Grid */
