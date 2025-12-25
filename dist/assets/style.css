@@ -3352,22 +3352,25 @@ a.contact-link:hover {
 
     /* Story Section Mobile - FIX COMPLET */
     .story-section {
-        padding: 3rem 1rem;
-        max-width: 100%;
+        padding: 2rem 1rem;
+        max-width: 100vw;
         width: 100%;
-        overflow: hidden;
+        overflow-x: hidden;
     }
 
     .story-container {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
         gap: 2rem;
         width: 100%;
         max-width: 100%;
+        padding: 0;
     }
 
     .story-media {
         order: 1;
         width: 100%;
+        margin: 0;
     }
 
     .story-content {
@@ -3375,32 +3378,44 @@ a.contact-link:hover {
         width: 100%;
         max-width: 100%;
         min-width: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
 
     .story-media img {
         max-width: 100%;
         height: auto;
         width: 100%;
+        display: block;
     }
 
     .story-text {
         width: 100%;
         max-width: 100%;
         min-width: 0;
+        padding: 0;
     }
 
     .story-text p {
         font-size: 1rem;
+        line-height: 1.6;
         margin-bottom: 1rem;
         word-break: break-word;
         overflow-wrap: break-word;
         width: 100%;
         max-width: 100%;
+        padding: 0;
     }
 
     .story-title {
         font-size: 1.8rem;
         word-break: break-word;
+        margin-bottom: 1rem;
+    }
+
+    .story-label {
+        display: block;
+        margin-bottom: 0.8rem;
     }
 
     /* Projects Grid */
