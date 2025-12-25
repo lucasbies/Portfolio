@@ -743,6 +743,10 @@ a {
     color: var(--text-light);
     line-height: 1.8;
     margin-bottom: 1.2rem;
+    font-size: 1.05rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
 }
 
 .story-text strong {
