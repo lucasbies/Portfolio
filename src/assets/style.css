@@ -759,22 +759,6 @@ a {
     font-style: italic;
 }
 
-/* Timeline description utilisée dans story section pour dark mode */
-.story-section .timeline-description p {
-    color: var(--text-light);
-    line-height: 1.8;
-    margin-bottom: 1.2rem;
-    font-size: 1.05rem;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    hyphens: auto;
-}
-
-.story-section .timeline-description strong {
-    color: var(--text-dark);
-    font-weight: 700;
-}
-
 /* ========================================
    10. TIMELINE
 ======================================== */
@@ -3385,11 +3369,17 @@ a.contact-link:hover {
         height: auto;
     }
 
-    .story-section .timeline-description p {
+    .story-text {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .story-text p {
         font-size: 1rem;
         margin-bottom: 1rem;
         word-wrap: break-word;
         overflow-wrap: break-word;
+        white-space: normal;
     }
 
     .story-title {
