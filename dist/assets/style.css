@@ -755,6 +755,19 @@ a {
     font-style: italic;
 }
 
+/* Timeline description utilisée dans story section pour dark mode */
+.story-section .timeline-description p {
+    color: var(--text-light);
+    line-height: 1.8;
+    margin-bottom: 1.2rem;
+    font-size: 1.05rem;
+}
+
+.story-section .timeline-description strong {
+    color: var(--text-dark);
+    font-weight: 700;
+}
+
 /* ========================================
    10. TIMELINE
 ======================================== */
@@ -3344,6 +3357,34 @@ a.contact-link:hover {
     .story-section,
     .timeline-section {
         padding: 3rem 1rem;
+    }
+
+    /* Story Section Mobile */
+    .story-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .story-media {
+        order: 1;
+    }
+
+    .story-content {
+        order: 2;
+    }
+
+    .story-media img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .story-section .timeline-description p {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .story-title {
+        font-size: 1.8rem;
     }
 
     /* Projects Grid */
