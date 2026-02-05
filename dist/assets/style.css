@@ -394,6 +394,12 @@ a {
     transform: translateX(4px);
 }
 
+/* Exception pour les boutons de téléchargement - doit être après pour surcharger */
+a.btn[download]:hover svg,
+a.btn[href*=".pdf"]:hover svg {
+    transform: translateY(2px) !important;
+}
+
 /* ========================================
    5. HERO HOME
 ======================================== */
@@ -3015,7 +3021,6 @@ a.contact-link:hover {
     border-radius: 16px;
     margin-top: 5rem;
 }
-
 
 .project-cta .cta-content {
     max-width: 800px;
