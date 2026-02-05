@@ -394,6 +394,12 @@ a {
     transform: translateX(4px);
 }
 
+/* Exception pour les boutons de téléchargement */
+.btn[download]:hover svg,
+.btn[href*=".pdf"]:hover svg {
+    transform: translateY(2px);
+}
+
 /* ========================================
    5. HERO HOME
 ======================================== */
