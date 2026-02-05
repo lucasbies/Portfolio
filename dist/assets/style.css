@@ -3008,13 +3008,14 @@ a.contact-link:hover {
 
 /* CTA Projet */
 .project-cta {
-    background: linear-gradient(135deg, var(--text-dark), var(--primary));
+    background: var(--gradient-cta);
     padding: 5rem 3rem;
     text-align: center;
     color: white;
     border-radius: 16px;
     margin-top: 5rem;
 }
+
 
 .project-cta .cta-content {
     max-width: 800px;
