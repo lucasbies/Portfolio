@@ -1613,10 +1613,6 @@ a.btn[href*=".pdf"]:hover svg {
     min-height: 280px;
 }
 
-.skill-category-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-md);
-}
 
 .skill-category-card h3 {
     display: flex;
@@ -1754,11 +1750,6 @@ a.btn[href*=".pdf"]:hover svg {
     border-radius: 12px;
     box-shadow: var(--shadow-sm);
     transition: all var(--transition-base);
-}
-
-.timeline-modern-content:hover {
-    transform: translateX(8px);
-    box-shadow: var(--shadow-md);
 }
 
 .timeline-icon {
@@ -4083,11 +4074,6 @@ a.contact-link:hover {
     border-radius: 16px;
     box-shadow: var(--shadow-md);
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
-}
-
-.intro-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 28px rgba(144, 80, 224, 0.35);
 }
 
 .intro-card .card-icon {
