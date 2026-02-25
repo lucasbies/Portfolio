@@ -1833,10 +1833,7 @@ a.btn[href*=".pdf"]:hover svg {
     transition: all var(--transition-base);
 }
 
-.experience-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-md);
-}
+
 
 .experience-header {
     display: flex;
@@ -4213,19 +4210,13 @@ a.contact-link:hover {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
-.experience-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
-}
+
 
 /* Couleurs par catégorie - TOUT EN VIOLET */
 .experience-education {
     border-left-color: var(--primary);
 }
 
-.experience-education:hover {
-    box-shadow: 0 12px 28px rgba(144, 80, 224, 0.2);
-}
 
 .experience-education .experience-icon {
     background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
@@ -4235,9 +4226,6 @@ a.contact-link:hover {
     border-left-color: var(--primary);
 }
 
-.experience-retail:hover {
-    box-shadow: 0 12px 28px rgba(144, 80, 224, 0.2);
-}
 
 .experience-retail .experience-icon {
     background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
@@ -4247,9 +4235,6 @@ a.contact-link:hover {
     border-left-color: var(--primary);
 }
 
-.experience-social:hover {
-    box-shadow: 0 12px 28px rgba(144, 80, 224, 0.2);
-}
 
 .experience-social .experience-icon {
     background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
@@ -4259,9 +4244,6 @@ a.contact-link:hover {
     border-left-color: var(--primary);
 }
 
-.experience-sport:hover {
-    box-shadow: 0 12px 28px rgba(144, 80, 224, 0.2);
-}
 
 .experience-sport .experience-icon {
     background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
@@ -4346,12 +4328,7 @@ a.contact-link:hover {
     color: var(--primary);
 }
 
-.experience-education .experience-tags .tag:hover,
-.experience-retail .experience-tags .tag:hover,
-.experience-social .experience-tags .tag:hover,
-.experience-sport .experience-tags .tag:hover {
-    background: rgba(144, 80, 224, 0.2);
-}
+
 
 /* Responsive Expériences */
 @media (max-width: 768px) {
@@ -4395,11 +4372,6 @@ a.contact-link:hover {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
-.about-column-card:hover {
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-    border-color: #d1d5db;
-    transform: translateY(-4px);
-}
 
 .column-header {
     display: flex;
