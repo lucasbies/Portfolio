@@ -680,10 +680,7 @@ a.btn[href*=".pdf"]:hover svg {
     transition: all var(--transition-base);
 }
 
-.stack-item:hover {
-    background: var(--primary-light);
-    transform: translateX(8px);
-}
+
 
 .stack-item img {
     flex-shrink: 0;
