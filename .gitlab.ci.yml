@@ -3,7 +3,7 @@ image: node:20
 pages:
   stage: deploy
   script:
-    - npm install
+    - npm ci
     - npm run build
     - mv dist public
   artifacts:
