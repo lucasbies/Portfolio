@@ -397,7 +397,7 @@ a {
 /* Exception pour les boutons de téléchargement - doit être après pour surcharger */
 a.btn[download]:hover svg,
 a.btn[href*=".pdf"]:hover svg {
-    transform: translateY(2px) !important;
+    transform: translateY(2px);
 }
 
 /* ========================================
@@ -841,38 +841,6 @@ a.btn[href*=".pdf"]:hover svg {
     color: var(--text-dark);
     font-size: 1.3rem;
     margin-bottom: 0.5rem;
-}
-
-.timeline-location {
-    color: #5a5a5a;
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
-}
-
-.timeline-description {
-    color: #555;
-    line-height: 1.6;
-    margin-bottom: 1rem;
-}
-
-.timeline-achievements {
-    list-style: none;
-    padding: 0;
-}
-
-.timeline-achievements li {
-    padding: 0.4rem 0;
-    padding-left: 1.5rem;
-    position: relative;
-    color: var(--text-light);
-}
-
-.timeline-achievements li::before {
-    content: '✓';
-    position: absolute;
-    left: 0;
-    color: var(--primary);
-    font-weight: bold;
 }
 
 /* ========================================
@@ -1804,7 +1772,7 @@ a.btn[href*=".pdf"]:hover svg {
 }
 
 .timeline-achievements li {
-    padding-left: 1.5rem;
+    padding: 0.4rem 0 0.4rem 1.5rem;
     position: relative;
     color: var(--text-light);
     font-size: 0.95rem;
@@ -1816,66 +1784,6 @@ a.btn[href*=".pdf"]:hover svg {
     left: 0;
     color: var(--primary);
     font-weight: bold;
-}
-
-/* Experiences Grid */
-.experiences-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.experience-card {
-    background: var(--bg-white);
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: var(--shadow-sm);
-    transition: all var(--transition-base);
-}
-
-
-
-.experience-header {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 1rem;
-    align-items: flex-start;
-}
-
-.experience-icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-}
-
-.experience-icon.projects {
-    background: #e3f2fd;
-    color: #1976d2;
-}
-
-.experience-icon.teaching {
-    background: #fff3e0;
-    color: #f57c00;
-}
-
-.experience-icon.work {
-    background: #f3e5f5;
-    color: #7b1fa2;
-}
-
-.experience-icon.animation {
-    background: #e8f5e9;
-    color: #388e3c;
-}
-
-.experience-header h3 {
-    font-size: 1.1rem;
-    color: var(--text-dark);
-    margin-bottom: 0.3rem;
 }
 
 .experience-period {
@@ -2577,20 +2485,24 @@ a.contact-link:hover {
 }
 
 [data-theme="dark"] .code-showcase-header {
-    background: #2d2d2d !important;
-    border-color: rgba(255, 255, 255, 0.1) !important;
+    background: #2d2d2d;
+    border-color: rgba(255, 255, 255, 0.1);
 }
 
 .code-showcase-header h3 {
     font-size: 0.95rem;
     font-weight: 600;
     margin: 0;
-    color: #1a1a1a !important;
     font-family: 'Consolas', 'Monaco', monospace;
 }
 
-[data-theme="dark"] .code-showcase-header h3 {
-    color: #ECF0F1 !important;
+/* Spécificité plus forte que .code-showcase h3 (plus bas) : plus besoin de !important */
+.code-showcase .code-showcase-header h3 {
+    color: #1a1a1a;
+}
+
+[data-theme="dark"] .code-showcase .code-showcase-header h3 {
+    color: #ECF0F1;
 }
 
 .code-showcase-link {
@@ -3650,15 +3562,6 @@ a.contact-link:hover {
         font-size: 1.2rem;
     }
 
-    /* Experiences Grid */
-    .experiences-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .experience-card {
-        padding: 1.5rem;
-    }
-
     /* About Columns */
     .about-two-columns {
         grid-template-columns: 1fr; /* ✅ Déjà dans 992px mais on garde */
@@ -3825,21 +3728,6 @@ a.contact-link:hover {
     .btn-large {
         padding: 1rem 2rem;
         font-size: 1rem;
-    }
-
-    .project-tags,
-    .project-meta-inline {
-        gap: 0.4rem;
-    }
-
-    .tag {
-        font-size: 0.75rem;
-        padding: 0.3rem 0.7rem;
-    }
-
-    .meta-chip {
-        font-size: 0.75rem;
-        padding: 0.3rem 0.6rem;
     }
 
     /* ✅ AJOUT : Hero stats très petit mobile */

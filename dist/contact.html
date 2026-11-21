@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Contactez Lucas Bieszczad pour un stage Gameplay Programmer (été 2026), projet C++/Unreal Engine ou collaboration. Réponse sous 48h.">
+    <meta name="description" content="Contactez Lucas Bieszczad pour une opportunité en développement backend (Python, API, SQL) ou une collaboration. Réponse sous 48h.">
     <meta name="author" content="Lucas Bieszczad">
-    <meta name="keywords" content="Lucas Bieszczad, Gameplay Programmer, Unreal Engine, C++, Unity, développeur jeux vidéo, BUT Informatique Graphique, systèmes de combat, AI, Blueprint">
+    <meta name="keywords" content="Lucas Bieszczad, Développeur backend, Backend Developer, API, Python, SQL, architecture logicielle, bases de données, C++, développement web">
 
     <!-- Open Graph (Facebook, LinkedIn) -->
-    <meta property="og:title" content="Contact | Lucas Bieszczad - Gameplay Programmer">
-    <meta property="og:description" content="Contactez Lucas Bieszczad pour un stage Gameplay Programmer (été 2026), projet C++/Unreal Engine ou collaboration. Réponse sous 48h.">
+    <meta property="og:title" content="Contact | Lucas Bieszczad - Développeur backend">
+    <meta property="og:description" content="Contactez Lucas Bieszczad pour une opportunité en développement backend (Python, API, SQL) ou une collaboration. Réponse sous 48h.">
     <meta property="og:image" content="https://lucasbies.github.io/Portfolio/assets/og-image.webp">
     <meta property="og:url" content="https://lucasbies.github.io/Portfolio/contact.html">
     <meta property="og:type" content="website">
@@ -20,8 +20,8 @@
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Contact | Lucas Bieszczad - Gameplay Programmer">
-    <meta name="twitter:description" content="Contactez Lucas Bieszczad pour un stage Gameplay Programmer (été 2026), projet C++/Unreal Engine ou collaboration. Réponse sous 48h.">
+    <meta name="twitter:title" content="Contact | Lucas Bieszczad - Développeur backend">
+    <meta name="twitter:description" content="Contactez Lucas Bieszczad pour une opportunité en développement backend (Python, API, SQL) ou une collaboration. Réponse sous 48h.">
     <meta name="twitter:image" content="https://lucasbies.github.io/Portfolio/assets/og-image.webp">
 
     <!-- Robots & Indexation -->
@@ -36,7 +36,7 @@
     <link rel="manifest" href="assets/site.webmanifest">
     <meta name="theme-color" content="#9050E0">
 
-    <title>Contact | Lucas Bieszczad - Gameplay Programmer</title>
+    <title>Contact | Lucas Bieszczad - Développeur backend</title>
     
     <!-- ✅ PRELOAD FONTS CRITIQUES -->
     <link rel="preload" href="assets/fonts/montserrat-v31-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
@@ -65,7 +65,7 @@
         <nav class="main-nav">
             <a href="index.html" class="logo">
                 <span class="logo-text">Lucas Bieszczad</span>
-                <span class="logo-subtitle">Gameplay Programmer</span>
+                <span class="logo-subtitle">Développeur backend</span>
             </a>
             
             <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
@@ -105,14 +105,15 @@
                 </li>
             </ul>
         </nav>
-    </header>    <!-- Hero Contact -->
+    </header>    <main id="contenu">
+<!-- Hero Contact -->
 <section class="contact-hero">
     <div class="contact-hero-content">
-        <!--<span class="contact-badge">Disponible en stage • Été 2026</span>-->
+        <!--<span class="contact-badge">Ouvert à des opportunités backend</span>-->
         <h1 class="contact-title">Contactez-moi</h1>
         <p class="contact-subtitle">
             Une question ? Un projet ? N'hésitez pas à me contacter,
-            <br>je vous réponds sous <strong>24h</strong>.
+            <br>je vous réponds sous <strong>48h</strong>.
         </p>
     </div>
 </section>
@@ -125,9 +126,12 @@
             <h2 class="form-title">Envoyez un message</h2>
             
             <form action="https://formspree.io/f/mqadvrkl" method="POST" class="contact-form">
-                <input type="text" name="name" placeholder="Votre nom" required>
-                <input type="email" name="email" placeholder="Votre email" required>
-                <textarea name="message" placeholder="Votre message" rows="6" required></textarea>
+                <label for="contact-name" class="sr-only">Votre nom</label>
+                <input type="text" id="contact-name" name="name" placeholder="Votre nom" autocomplete="name" required>
+                <label for="contact-email" class="sr-only">Votre email</label>
+                <input type="email" id="contact-email" name="email" placeholder="Votre email" autocomplete="email" required>
+                <label for="contact-message" class="sr-only">Votre message</label>
+                <textarea id="contact-message" name="message" placeholder="Votre message" rows="6" required></textarea>
                 <button type="submit" class="btn btn-primary btn-large">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
@@ -199,7 +203,7 @@
             <div class="footer-section">
                 <h3 class="footer-title">Lucas Bieszczad</h3>
                 <p class="footer-tagline">
-                    Gameplay Programmer passionné par les systèmes de combat et l'intelligence artificielle.
+                    Développeur backend passionné par l'architecture logicielle, les API et les bases de données.
                 </p>
                 <div class="footer-social">
                     <a href="https://github.com/lucasbies" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub">
@@ -266,7 +270,7 @@
     
         <!-- Copyright bar -->
         <div class="footer-bottom">
-            <p>© 2025 Lucas Bieszczad — Tous droits réservés</p>
+            <p>© 2026 Lucas Bieszczad — Tous droits réservés</p>
             <button class="theme-toggle" aria-label="Changer le thème">
                 <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <circle cx="12" cy="12" r="5"/>

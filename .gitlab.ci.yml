@@ -4,7 +4,7 @@ pages:
   stage: deploy
   script:
     - npm install
-    - node generate.js
+    - npm run build
     - mv dist public
   artifacts:
     paths:

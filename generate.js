@@ -26,8 +26,8 @@ const pages = [
         template: 'index.hbs',
         output: 'index.html',
         meta: {
-            title: 'Lucas Bieszczad | Gameplay Programmer - Portfolio',
-            description: 'Lucas Bieszczad | Gameplay Programmer étudiant spécialisé en systèmes de combat et AI sur Unreal Engine 5. Portfolio projets C++/Blueprint.',
+            title: 'Lucas Bieszczad | Développeur backend - Portfolio',
+            description: 'Lucas Bieszczad, développeur backend en formation (BUT Informatique). Python, API, bases de données SQL, C++. Portfolio de projets.',
             url: 'https://lucasbies.github.io/Portfolio/',
             image: 'https://lucasbies.github.io/Portfolio/assets/og-image.webp',
             type: 'website'
@@ -37,8 +37,8 @@ const pages = [
         template: 'about.hbs',
         output: 'about.html',
         meta: {
-            title: 'À propos | Lucas Bieszczad - Gameplay Programmer',
-            description: 'Lucas Bieszczad, 18 ans, étudiant BUT Informatique Graphique au Puy-en-Velay. Spécialisé Unreal Engine 5, C++, systèmes de combat et AI.',
+            title: 'À propos | Lucas Bieszczad - Développeur backend',
+            description: 'Lucas Bieszczad, étudiant en BUT Informatique Graphique au Puy-en-Velay, orienté développement backend : Python, API, SQL et architecture logicielle.',
             url: 'https://lucasbies.github.io/Portfolio/about.html',
             image: 'https://lucasbies.github.io/Portfolio/assets/og-image.webp',
             type: 'profile'
@@ -48,8 +48,8 @@ const pages = [
         template: 'projets.hbs',
         output: 'projets.html',
         meta: {
-            title: 'Projets | Lucas Bieszczad - Gameplay Programmer',
-            description: 'Portfolio projets jeux vidéo : niveau Steampunk Unreal Engine 5, Solitaire C++, systèmes de combat et AI. Gameplay Programming.',
+            title: 'Projets | Lucas Bieszczad - Développeur backend',
+            description: 'Projets de Lucas Bieszczad : synchronisation réseau multijoueur, générateur procédural, C++ orienté objet et architecture logicielle.',
             url: 'https://lucasbies.github.io/Portfolio/projets.html',
             image: 'https://lucasbies.github.io/Portfolio/assets/og-image.webp',
             type: 'website'
@@ -59,10 +59,10 @@ const pages = [
         template: 'TransMontagne.hbs',
         output: 'TransMontagne.html',
         meta: {
-            title: 'Projet Steampunk | Lucas Bieszczad - Gameplay Programmer',
-            description: 'Projet Steampunk : niveau action/plateforme Unreal Engine 5 avec dash multi-directionnel, wall-running et AI ennemis. Équipe 5, 6 mois.',
+            title: 'Trans Montagne | Lucas Bieszczad - Développeur backend',
+            description: 'Trans Montagne : jeu d’exploration narratif sur Unreal Engine 5 (Blueprint). IA modulaires, sauvegarde, checkpoints et menus. Équipe de 5, 6 mois.',
             url: 'https://lucasbies.github.io/Portfolio/TransMontagne.html',
-            image: 'https://lucasbies.github.io/Portfolio/assets/Blocking.webp',
+            image: 'https://lucasbies.github.io/Portfolio/assets/projects/TransMontagne/Blocking.webp',
             type: 'article'
         }
     },
@@ -70,10 +70,10 @@ const pages = [
         template: 'solitaire.hbs',
         output: 'solitaire.html',
         meta: {
-            title: 'Solitaire Console C++ | Lucas Bieszczad - Gameplay Programmer',
+            title: 'Solitaire Console C++ | Lucas Bieszczad - Développeur backend',
             description: 'Solitaire Console C++ : jeu Klondike fonctionnel avec POO, gestion mémoire moderne et architecture modulaire. Projet académique 3 jours.',
             url: 'https://lucasbies.github.io/Portfolio/solitaire.html',
-            image: 'https://lucasbies.github.io/Portfolio/assets/Solitaire.webp',
+            image: 'https://lucasbies.github.io/Portfolio/assets/projects/solitaire/thumbnail.webp',
             type: 'article'
         }
     },
@@ -81,10 +81,10 @@ const pages = [
         template: 'OverRule.hbs',
         output: 'OverRule.html',
         meta: {
-            title: 'Over Rule | Lucas Bieszczad - Gameplay Programmer',
+            title: 'Over Rule | Lucas Bieszczad - Développeur backend',
             description: 'Over Rule : jeu multijoueur 2D Unity avec Netcode for GameObjects. Synchronisation réseau, lobby system et mécaniques coopératives. Projet académique équipe 5.',
             url: 'https://lucasbies.github.io/Portfolio/OverRule.html',
-            image: 'https://lucasbies.github.io/Portfolio/assets/OverRule.webp',
+            image: 'https://lucasbies.github.io/Portfolio/assets/projects/OverRule/OverRule.webp',
             type: 'article'
         }
     },
@@ -92,8 +92,8 @@ const pages = [
         template: 'contact.hbs',
         output: 'contact.html',
         meta: {
-            title: 'Contact | Lucas Bieszczad - Gameplay Programmer',
-            description: 'Contactez Lucas Bieszczad pour un stage Gameplay Programmer (été 2026), projet C++/Unreal Engine ou collaboration. Réponse sous 48h.',
+            title: 'Contact | Lucas Bieszczad - Développeur backend',
+            description: 'Contactez Lucas Bieszczad pour une opportunité en développement backend (Python, API, SQL) ou une collaboration. Réponse sous 48h.',
             url: 'https://lucasbies.github.io/Portfolio/contact.html',
             image: 'https://lucasbies.github.io/Portfolio/assets/og-image.webp',
             type: 'website'
@@ -103,7 +103,7 @@ const pages = [
         template: 'DonjonProcedural.hbs',
         output: 'DonjonProcedural.html',
         meta: {
-            title: 'Donjon Procedural | Lucas Bieszczad - Gameplay Programmer',
+            title: 'Donjon Procedural | Lucas Bieszczad - Développeur backend',
             description: 'Donjon procédural généré avec Unity 6, mettant en œuvre des algorithmes de génération procédurale pour des environnements de jeu dynamiques.',
             url: 'https://lucasbies.github.io/Portfolio/DonjonProcedural.html',
             image: 'https://lucasbies.github.io/Portfolio/assets/projects/DonjonProcedural/DonjonProcedural.webp',
@@ -126,7 +126,8 @@ pages.forEach(page => {
         
         const finalHtml = layoutTemplate({
             body: pageHtml,
-            meta: page.meta
+            meta: page.meta,
+            year: new Date().getFullYear()
         });
         
         const outputPath = path.join(__dirname, 'dist', page.output);

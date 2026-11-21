@@ -116,6 +116,17 @@ function initProjectFilters() {
     const projectCards = document.querySelectorAll('[data-tags]');
     
     if (filterBtns.length === 0 || projectCards.length === 0) return;
+
+    // Compteurs calculés à partir des data-tags (évite les chiffres en dur)
+    filterBtns.forEach(btn => {
+        const count = btn.querySelector('.filter-count');
+        if (!count) return;
+        const filter = btn.dataset.filter;
+        const n = filter === 'all'
+            ? projectCards.length
+            : [...projectCards].filter(c => c.dataset.tags.split(' ').includes(filter)).length;
+        count.textContent = `(${n})`;
+    });
     
     filterBtns.forEach(btn => {
         btn.addEventListener('click', () => {
