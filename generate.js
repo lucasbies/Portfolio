@@ -29,8 +29,24 @@ const pages = [
             title: 'Lucas Bieszczad | Développeur backend - Portfolio',
             description: 'Lucas Bieszczad, développeur backend en formation (BUT Informatique). Python, API, bases de données SQL, C++. Portfolio de projets.',
             url: 'https://lucasbies.github.io/Portfolio/',
-            image: 'https://lucasbies.github.io/Portfolio/assets/og-image.webp',
-            type: 'website'
+            image: 'https://lucasbies.github.io/Portfolio/assets/og-image.png',
+            type: 'website',
+            // Données structurées (schema.org Person) pour les moteurs de recherche
+            jsonld: JSON.stringify({
+                '@context': 'https://schema.org',
+                '@type': 'Person',
+                name: 'Lucas Bieszczad',
+                jobTitle: 'Développeur backend',
+                url: 'https://lucasbies.github.io/Portfolio/',
+                image: 'https://lucasbies.github.io/Portfolio/assets/moi.webp',
+                worksFor: { '@type': 'Organization', name: 'Criteo' },
+                affiliation: { '@type': 'CollegeOrUniversity', name: 'IUT Clermont Auvergne' },
+                knowsAbout: ['Python', 'FastAPI', 'API REST', 'API', 'SQL', 'C++', 'C#'],
+                sameAs: [
+                    'https://github.com/lucasbies',
+                    'https://www.linkedin.com/in/lucas-bieszczad/'
+                ]
+            })
         }
     },
     {
@@ -40,7 +56,7 @@ const pages = [
             title: 'À propos | Lucas Bieszczad - Développeur backend',
             description: 'Lucas Bieszczad, étudiant en BUT Informatique Graphique au Puy-en-Velay, orienté développement backend : Python, API, SQL et architecture logicielle.',
             url: 'https://lucasbies.github.io/Portfolio/about.html',
-            image: 'https://lucasbies.github.io/Portfolio/assets/og-image.webp',
+            image: 'https://lucasbies.github.io/Portfolio/assets/og-image.png',
             type: 'profile'
         }
     },
@@ -51,7 +67,7 @@ const pages = [
             title: 'Projets | Lucas Bieszczad - Développeur backend',
             description: 'Projets de Lucas Bieszczad : synchronisation réseau multijoueur, générateur procédural, C++ orienté objet et architecture logicielle.',
             url: 'https://lucasbies.github.io/Portfolio/projets.html',
-            image: 'https://lucasbies.github.io/Portfolio/assets/og-image.webp',
+            image: 'https://lucasbies.github.io/Portfolio/assets/og-image.png',
             type: 'website'
         }
     },
@@ -93,9 +109,9 @@ const pages = [
         output: 'contact.html',
         meta: {
             title: 'Contact | Lucas Bieszczad - Développeur backend',
-            description: 'Contactez Lucas Bieszczad pour une opportunité en développement backend (Python, API, SQL) ou une collaboration. Réponse sous 48h.',
+            description: 'Contactez Lucas Bieszczad, développeur backend en alternance chez Criteo (Python, API, SQL). Réponse sous 48h.',
             url: 'https://lucasbies.github.io/Portfolio/contact.html',
-            image: 'https://lucasbies.github.io/Portfolio/assets/og-image.webp',
+            image: 'https://lucasbies.github.io/Portfolio/assets/og-image.png',
             type: 'website'
         }
     },
@@ -103,7 +119,7 @@ const pages = [
         template: 'DonjonProcedural.hbs',
         output: 'DonjonProcedural.html',
         meta: {
-            title: 'Donjon Procedural | Lucas Bieszczad - Développeur backend',
+            title: 'Générateur de donjons procédural | Lucas Bieszczad - Développeur backend',
             description: 'Donjon procédural généré avec Unity 6, mettant en œuvre des algorithmes de génération procédurale pour des environnements de jeu dynamiques.',
             url: 'https://lucasbies.github.io/Portfolio/DonjonProcedural.html',
             image: 'https://lucasbies.github.io/Portfolio/assets/projects/DonjonProcedural/DonjonProcedural.webp',
@@ -111,6 +127,8 @@ const pages = [
         }
     }
 ];
+
+const SITE_URL = 'https://lucasbies.github.io/Portfolio/';
 
 // Générer chaque page
 console.log('🔨 Génération des pages HTML...');
@@ -136,8 +154,20 @@ pages.forEach(page => {
         console.log(`   ✅ ${page.output} généré avec succès`);
     } catch (error) {
         console.error(`   ❌ Erreur lors de la génération de ${page.output}:`, error.message);
+        process.exitCode = 1; // fait échouer la CI au lieu de déployer un site incomplet
     }
 });
+
+// sitemap.xml et robots.txt à la racine du site
+console.log('🗺️  Génération du sitemap et de robots.txt...');
+const today = new Date().toISOString().slice(0, 10);
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${pages.map(p => `  <url><loc>${p.meta.url}</loc><lastmod>${today}</lastmod></url>`).join('\n')}
+</urlset>
+`;
+fs.writeFileSync(path.join(__dirname, 'dist', 'sitemap.xml'), sitemap);
+fs.writeFileSync(path.join(__dirname, 'dist', 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${SITE_URL}sitemap.xml\n`);
 
 // ✅ COPIE DES ASSETS (CSS, JS, images, fonts, etc.)
 console.log('📂 Copie des assets...');
@@ -146,6 +176,7 @@ try {
     console.log('   ✅ Assets copiés avec succès');
 } catch (error) {
     console.error('   ❌ Erreur lors de la copie des assets:', error.message);
+    process.exitCode = 1;
 }
 
 console.log('\n🎉 Génération terminée !');

@@ -5,15 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="{{#if meta.description}}{{meta.description}}{{else}}Lucas Bieszczad | Développeur backend spécialisé en API, architecture logicielle et bases de données. Portfolio projets C++/Python/SQL.{{/if}}">
+    <!-- SEO -->
+    <meta name="description" content="{{#if meta.description}}{{meta.description}}{{else}}Lucas Bieszczad, développeur backend : Python, API, bases de données.{{/if}}">
     <meta name="author" content="Lucas Bieszczad">
-    <meta name="keywords" content="Lucas Bieszczad, Développeur backend, Backend Developer, API, Python, SQL, architecture logicielle, bases de données, C++, développement web">
 
-    <!-- Open Graph (Facebook, LinkedIn) -->
-    <meta property="og:title" content="{{#if meta.title}}{{meta.title}}{{else}}Lucas Bieszczad | Développeur backend - Portfolio{{/if}}">
-    <meta property="og:description" content="{{#if meta.description}}{{meta.description}}{{else}}Développeur backend spécialisé en API, architecture logicielle et SQL.{{/if}}">
-    <meta property="og:image" content="{{#if meta.image}}{{meta.image}}{{else}}https://lucasbies.github.io/Portfolio/assets/og-image.webp{{/if}}">
+    <!-- Open Graph -->
+    <meta property="og:title" content="{{#if meta.title}}{{meta.title}}{{else}}Lucas Bieszczad | Développeur backend{{/if}}">
+    <meta property="og:description" content="{{#if meta.description}}{{meta.description}}{{else}}Développeur backend : Python, API, bases de données.{{/if}}">
+    <meta property="og:image" content="{{#if meta.image}}{{meta.image}}{{else}}https://lucasbies.github.io/Portfolio/assets/og-image.png{{/if}}">
     <meta property="og:url" content="{{#if meta.url}}{{meta.url}}{{else}}https://lucasbies.github.io/Portfolio/{{/if}}">
     <meta property="og:type" content="{{#if meta.type}}{{meta.type}}{{else}}website{{/if}}">
     <meta property="og:locale" content="fr_FR">
@@ -21,12 +20,12 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{#if meta.title}}{{meta.title}}{{else}}Lucas Bieszczad | Développeur backend{{/if}}">
-    <meta name="twitter:description" content="{{#if meta.description}}{{meta.description}}{{else}}Développeur backend spécialisé en API, SQL et architecture logicielle.{{/if}}">
-    <meta name="twitter:image" content="{{#if meta.image}}{{meta.image}}{{else}}https://lucasbies.github.io/Portfolio/assets/og-image.webp{{/if}}">
+    <meta name="twitter:description" content="{{#if meta.description}}{{meta.description}}{{else}}Développeur backend : Python, API, bases de données.{{/if}}">
+    <meta name="twitter:image" content="{{#if meta.image}}{{meta.image}}{{else}}https://lucasbies.github.io/Portfolio/assets/og-image.png{{/if}}">
 
-    <!-- Robots & Indexation -->
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="{{#if meta.url}}{{meta.url}}{{else}}https://lucasbies.github.io/Portfolio/{{/if}}">
+    {{#if meta.jsonld}}<script type="application/ld+json">{{{meta.jsonld}}}</script>{{/if}}
 
     <!-- Favicons -->
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
@@ -34,33 +33,29 @@
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <link rel="manifest" href="assets/site.webmanifest">
-    <meta name="theme-color" content="#9050E0">
+    <meta name="theme-color" content="#EEF1F4" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0E1626" media="(prefers-color-scheme: dark)">
 
-    <title>{{#if meta.title}}{{meta.title}}{{else}}Portfolio — Lucas Bieszczad{{/if}}</title>
-    
-    <!-- ✅ PRELOAD FONTS CRITIQUES -->
-    <link rel="preload" href="assets/fonts/montserrat-v31-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="assets/fonts/montserrat-v31-latin-700.woff2" as="font" type="font/woff2" crossorigin>
-    
-    <!-- ✅ FONTS CSS INLINE -->
-    <style>
-        /* MONTSERRAT SELF-HOSTED v31 */
-        @font-face{font-display:swap;font-family:'Montserrat';font-style:normal;font-weight:300;src:url('assets/fonts/montserrat-v31-latin-300.woff2') format('woff2')}
-        @font-face{font-display:swap;font-family:'Montserrat';font-style:normal;font-weight:400;src:url('assets/fonts/montserrat-v31-latin-regular.woff2') format('woff2')}
-        @font-face{font-display:swap;font-family:'Montserrat';font-style:normal;font-weight:500;src:url('assets/fonts/montserrat-v31-latin-500.woff2') format('woff2')}
-        @font-face{font-display:swap;font-family:'Montserrat';font-style:normal;font-weight:600;src:url('assets/fonts/montserrat-v31-latin-600.woff2') format('woff2')}
-        @font-face{font-display:swap;font-family:'Montserrat';font-style:normal;font-weight:700;src:url('assets/fonts/montserrat-v31-latin-700.woff2') format('woff2')}
-        @font-face{font-display:swap;font-family:'Montserrat';font-style:normal;font-weight:800;src:url('assets/fonts/montserrat-v31-latin-800.woff2') format('woff2')}
-    </style>
-    
-    <!-- ✅ CSS PRINCIPAL BLOQUANT (élimine FOUC) -->
+    <title>{{#if meta.title}}{{meta.title}}{{else}}Lucas Bieszczad | Développeur backend{{/if}}</title>
+
+    <!-- Thème appliqué avant le rendu (évite le flash clair/sombre) -->
+    <script>
+        try {
+            var t = localStorage.getItem('theme');
+            if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {}
+    </script>
+
+    <!-- IBM Plex : Sans (texte), Sans Condensed (titres), Mono (requêtes, routes, code) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+Condensed:wght@500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+
     <link rel="stylesheet" href="assets/style.css">
-    
-    <!-- ✅ DEFER SCRIPT (exécute après HTML parsé) -->
     <script src="assets/script.js" defer></script>
-
 </head>
 <body>
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
     {{> header }}
     {{{ body }}}
     {{> footer }}

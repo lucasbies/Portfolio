@@ -1,527 +1,181 @@
-<!-- Hero About -->
-<section class="about-hero-section">
-    <div class="about-hero-content">
-        <!--<span class="about-badge">Portfolio • À propos</span>-->
-        <h1 class="about-hero-title">Lucas Bieszczad</h1>
-        <p class="about-hero-subtitle">
-            <strong>Développeur backend</strong> orienté <strong>Python</strong>, <strong>API</strong> et
-            <strong>bases de données</strong>.
-            <br>J'aime comprendre les systèmes, résoudre des problèmes et construire des services simples et fiables.
-        </p>
+<main id="contenu">
+
+<header class="page-head">
+    <h1>À propos</h1>
+    <p class="lede">
+        Développeur backend orienté Python, API et bases de données. J'aime comprendre
+        comment un système fonctionne, résoudre les problèmes qu'il pose et construire des services simples et fiables.
+    </p>
+</header>
+
+<section class="section">
+    <div class="about-intro">
+        <img src="assets/moi.webp" alt="Portrait de Lucas Bieszczad" class="portrait"
+             loading="lazy" decoding="async" width="300" height="300">
+        <div>
+            <h2>Parcours</h2>
+            <p>
+                J'ai découvert la programmation avec Unity, pendant la spécialité NSI au lycée.
+                Ce premier jeu 2D m'a appris la puissance de l'itération : des mécaniques simples,
+                une exécution soignée.
+            </p>
+            <p>
+                Un an plus tard, j'ai passé mon été à construire un jeu 3D. Il n'a jamais vu le jour,
+                mais il m'a appris l'importance de l'architecture : code propre, systèmes modulaires,
+                planification rigoureuse.
+            </p>
+            <p>
+                En BUT, j'ai retrouvé ce goût de l'architecture sur des projets d'équipe : des IA
+                paramétrables par les designers sans toucher au code sur Trans Montagne, et la
+                synchronisation réseau apprise en autonomie sur Over Rule.
+            </p>
+            <div class="btn-row">
+                <a href="assets/cv.pdf" class="btn btn-primary" download>Télécharger le CV</a>
+                <a href="contact.html" class="btn btn-secondary">Me contacter</a>
+            </div>
+        </div>
     </div>
 </section>
 
-<!-- Contenu principal -->
-<main class="about-modern">
-    
-    <!-- Présentation -->
-    <section class="about-section-block">
-        <div class="section-block-header">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
-                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2M12 11a4 4 0 100-8 4 4 0 000 8z" stroke="currentColor" stroke-width="2"/>
-            </svg>
-            <h2>Présentation</h2>
-        </div>
-        <div class="section-block-content">
-            <div class="about-profile-card">
-                <img src="assets/moi.webp" alt="Portrait de Lucas Bieszczad"
-                class="profile-large"
-                 loading="lazy"
-                 decoding="async"
-                 width="300"
-                 height="300">
-                <div class="profile-info">
-                    <h3>Lucas Bieszczad</h3>
-                    <p class="profile-role">Développeur backend</p>
-                    <div class="profile-location">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                            <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke="currentColor" stroke-width="2"/>
-                            <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke="currentColor" stroke-width="2"/>
-                        </svg>
-                        Puy-en-Velay, France
-                    </div>
-                    <div class="profile-availability">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
-                        <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2"/>
-                    </svg>
-                    Ouvert aux opportunités backend : <strong>oui</strong>
-                </div>
-                </div>
-            </div>
-            
-           <!-- Mon parcours -->
-           <div class="about-intro-text">
+<section class="section" aria-labelledby="titre-competences">
+    <div class="section-head">
+        <h2 id="titre-competences">Compétences</h2>
+    </div>
+    <dl class="defs">
+        <div><dt>Langages</dt><dd>Python, SQL, C++, C#</dd></div>
+        <div><dt>Backend</dt><dd>FastAPI, API REST</dd></div>
+        <div><dt>Outils</dt><dd>Git et GitHub, Gerrit, Visual Studio, VS Code, Notion</dd></div>
+        <div><dt>Projets de formation</dt><dd>Unity, Unreal Engine 5 (Blueprints), Blender</dd></div>
+        <div><dt>Qualités</dt><dd>Autonomie, curiosité, persévérance, organisation, esprit d'équipe</dd></div>
+    </dl>
+</section>
+
+<section class="section" aria-labelledby="titre-formation">
+    <div class="section-head">
+        <h2 id="titre-formation">Formation</h2>
+    </div>
+    <ol class="timeline" reversed>
+        <li>
+            <span class="timeline__date">2024 – 2027</span>
+            <div>
+                <h3>BUT Informatique Graphique</h3>
+                <p class="timeline__place">IUT Clermont Auvergne, Le Puy-en-Velay</p>
                 <p>
-                    J'ai découvert Unity grâce à la spécialité NSI. 
-                    Ce premier jeu 2D m'a appris <strong>la puissance de l'itération</strong> : 
-                    des mécaniques simples, une exécution soignée.
-                </p>
-                <p>
-                    Un an plus tard, j'ai passé mon été à construire un jeu 3D sur Unity. 
-                    Il n'a jamais vu le jour, mais il m'a enseigné <strong>l'importance de l'architecture</strong>. 
-                    Code propre, systèmes modulaires, planification rigoureuse.
-                </p>
-            </div>
-
-           <div class="about-intro-cards">
-    
-
-    <!-- Card 2 : Mon approche -->
-    <article class="intro-card">
-        <div class="card-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2"/>
-            </svg>
-        </div>
-        <h3>Mon approche</h3>
-        <p>
-            <strong>Architecture claire</strong> pour faciliter le travail d'équipe :
-        </p>
-        <ul>
-            <li><strong>Trans Montagne</strong> (UE5) : IA modulaires paramétrables par designers sans code</li>
-            <li><strong>Over Rule</strong> (Unity) : Apprentissage autonome Netcode (lag compensation, prédiction client)</li>
-        </ul>
-    </article>
-
-    <!-- Card 3 : Mon objectif -->
-    <article class="intro-card">
-        <div class="card-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M13 10V3L4 14h7v7l9-11h-7z" stroke="currentColor" stroke-width="2"/>
-            </svg>
-        </div>
-        <h3>Mon objectif</h3>
-        <p>
-            Intégrer une <strong>équipe backend</strong> après mon BUT 
-            pour affiner mes compétences en API, SQL et architecture logicielle.
-        </p>
-        <p class="text-sm">
-            Je privilégie <strong>l'expérience terrain</strong> pour apprendre directement aux côtés de seniors.
-        </p>
-    </article>
-
-</div>
-<!--
-
-<blockquote class="about-quote-highlight">
-    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" class="quote-icon">
-        <path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" stroke="currentColor" stroke-width="2"/>
-    </svg>
-    <p>
-        "L'architecture logicielle, c'est comme une ceinture noire de judo : 
-        ça demande de la discipline, de la répétition, et ça paie sur le long terme."
-    </p>
-</blockquote>-->
-            </div>
-    </section>
-
-    <!-- Compétences techniques -->
-    <section class="about-section-block bg-light">
-        <div class="section-block-header">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
-                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2"/>
-            </svg>
-            <h2>Stack technique</h2>
-        </div>
-        <div class="skills-grid">
-            
-            <!-- Moteurs & Langages -->
-            <div class="skill-category-card">
-                <h3>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <rect x="3" y="3" width="7" height="7" rx="1" stroke="currentColor" stroke-width="2"/>
-                        <rect x="14" y="3" width="7" height="7" rx="1" stroke="currentColor" stroke-width="2"/>
-                        <rect x="3" y="14" width="7" height="7" rx="1" stroke="currentColor" stroke-width="2"/>
-                        <rect x="14" y="14" width="7" height="7" rx="1" stroke="currentColor" stroke-width="2"/>
-                    </svg>
-                    Moteurs & Langages
-                </h3>
-                <ul class="tags">
-                    <li class="tag tech">Unreal Engine 5</li>
-                    <li class="tag tech">Blueprints</li>
-                    <li class="tag tech">C++</li>
-                    <li class="tag tech">Unity</li>
-                    <li class="tag tech">C#</li>
-                    <li class="tag tech">Python</li>
-                    <li class="tag tech">SQL</li>
-                </ul>
-            </div>
-
-            <!-- Outils -->
-            <div class="skill-category-card">
-                <h3>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" stroke="currentColor" stroke-width="2"/>
-                    </svg>
-                    Outils & Workflow
-                </h3>
-                <ul class="tags">
-                    <li class="tag tech">Git / GitHub</li>
-                    <li class="tag tech">Notion</li>
-                    <li class="tag tech">Photopea</li> 
-                    <li class="tag tech">Visual Studio</li>
-                    <li class="tag tech">Blender</li>
-
-                </ul>
-            </div>
-
-            <!-- Soft Skills -->
-            <div class="skill-category-card">
-                <h3>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2"/>
-                    </svg>
-                    Soft Skills
-                </h3>
-                <ul class="tags">
-                    <li class="tag soft">Créativité</li>
-                    <li class="tag soft">Esprit d'équipe</li>
-                    <li class="tag soft">Adaptabilité</li>
-                    <li class="tag soft">Organisation</li>
-                    <li class="tag soft">Autonomie</li>
-                    <li class="tag soft">Curiosité</li>
-                    <li class="tag soft">Persévérance</li>
-                </ul>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Parcours & Formation -->
-    <section class="about-section-block">
-        <div class="section-block-header">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
-                <path d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" stroke="currentColor" stroke-width="2"/>
-            </svg>
-            <h2>Formation</h2>
-        </div>
-        
-        <div class="timeline-modern">
-            
-            <!-- Item 1 -->
-            <article class="timeline-modern-item">
-                <div class="timeline-modern-marker">
-                    <span class="marker-year">2024-2027</span>
-                </div>
-                <div class="timeline-modern-content">
-                    <div class="timeline-icon education">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" stroke="currentColor" stroke-width="2"/>
-                        </svg>
-                    </div>
-                    <h3>BUT Informatique Graphique</h3>
-                <p class="timeline-location">IUT Clermont Auvergne · Le Puy-en-Velay</p>
-                <p class="timeline-description">
-                    Programmation C++ et C#, architecture logicielle, optimisation des performances, 
+                    Programmation C++ et C#, architecture logicielle, optimisation des performances,
                     travail en équipe Agile. Projets réalisés sur Unity et Unreal Engine 5.
                 </p>
-                <ul class="timeline-achievements">
-                    <li><strong>Trans Montagne</strong> : Niveau steampunk UE5 (6 mois, équipe 5)</li>
-                    <li><strong>Over Rule</strong> : Jeu multijoueur Unity (2 mois, équipe 5)</li>
-                    <li><strong>ASCII Converter</strong> : Application C++ transformation image → ASCII (2 jours, duo)</li>
-                    <li><strong>Solitaire</strong> : Jeu console C++ avec POO classique (3 jours, solo)</li>
+                <ul>
+                    <li>Trans Montagne : jeu d'exploration sur Unreal Engine 5 (6 mois, équipe de 5)</li>
+                    <li>Over Rule : jeu multijoueur sur Unity (2 mois, équipe de 5)</li>
+                    <li>ASCII Converter : conversion d'images en ASCII en C++ (2 jours, en binôme)</li>
+                    <li>Solitaire : jeu console en C++ orienté objet (3 jours, solo)</li>
                 </ul>
-                </div>
-            </article>
-
-            <!-- Item 2 -->
-            <article class="timeline-modern-item">
-                <div class="timeline-modern-marker">
-                    <span class="marker-year">2024</span>
-                </div>
-                <div class="timeline-modern-content">
-                    <div class="timeline-icon diploma">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2"/>
-                        </svg>
-                    </div>
-                    <h3>Baccalauréat Général</h3>
-                <p class="timeline-location">Spécialités Mathématiques & NSI · Mention AB</p>
-                <p class="timeline-description">
-                    Projet NSI : jeu de plateforme 2D sur Unity en équipe de 4. 
-                    Première expérience de développement collaboratif avec gestion Git.
+            </div>
+        </li>
+        <li>
+            <span class="timeline__date">2024</span>
+            <div>
+                <h3>Baccalauréat général, mention assez bien</h3>
+                <p class="timeline__place">Spécialités mathématiques et NSI</p>
+                <p>
+                    Projet NSI : jeu de plateforme 2D sur Unity en équipe de 4.
+                    Première expérience de développement collaboratif avec Git.
                 </p>
             </div>
-            </article>
-
-            <!-- Item 3 -->
-            <article class="timeline-modern-item">
-                <div class="timeline-modern-marker">
-                    <span class="marker-year">2024</span>
-                </div>
-                <div class="timeline-modern-content">
-                    <div class="timeline-icon certificate">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" stroke="currentColor" stroke-width="2"/>
-                        </svg>
-                    </div>
-                    <h3>BAFA</h3>
-                <p class="timeline-location">Formation Bourges</p>
-                <p class="timeline-description">
-                    Formation en travail d'équipe, gestion de groupe et communication. 
-                    Compétences transférables au développement collaboratif (coordination équipe, deadlines).
-                </p>
-                </div>
-            </article>
-
-        </div>
-    </section>
-
-    <!-- Expériences -->
-    <section class="about-section-block">
-        <div class="section-block-header">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
-                <path d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke="currentColor" stroke-width="2"/>
-            </svg>
-            <h2>Expériences professionnelles</h2>
-        </div>
-        
-        <!-- Expériences avec couleurs par catégorie -->
-    <div class="experiences-grid">
-    
-        <!-- Tutorat (éducation = bleu) -->
-        <article class="experience-card experience-education">
-            <div class="experience-header">
-                <div class="experience-icon">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M12 14l9-5-9-5-9 5 9 5z" stroke="currentColor" stroke-width="2"/>
-                        <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" stroke="currentColor" stroke-width="2"/>
-                    </svg>
-                </div>
-                <div>
-                    <h3>Aide à la réussite / Tutorat</h3>
-                    <p class="experience-meta">
-                        <span class="meta-company">IUT Clermont Auvergne</span>
-                        <span class="meta-date">Janv. - Avr. 2026</span>
-                    </p>
-                </div>
+        </li>
+        <li>
+            <span class="timeline__date">2024</span>
+            <div>
+                <h3>BAFA</h3>
+                <p class="timeline__place">Bourges</p>
+                <p>Travail d'équipe, gestion de groupe et communication.</p>
             </div>
-            <p class="experience-description">
-                Accompagnement étudiant BUT 1 en difficulté : aide aux révisions, 
-                organisation du travail, conseil méthodologie. Renforce mes compétences 
-                en communication et vulgarisation technique.
-            </p>
-            <div class="experience-tags">
-                <span class="tag">Communication</span>
-                <span class="tag">Pédagogie</span>
-                <span class="tag">Organisation</span>
-            </div>
-        </article>
-
-        <!-- Équipier (retail = vert) -->
-        <article class="experience-card experience-retail">
-            <div class="experience-header">
-                <div class="experience-icon">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke="currentColor" stroke-width="2"/>
-                    </svg>
-                </div>
-                <div>
-                    <h3>Équipier polyvalent</h3>
-                    <p class="experience-meta">
-                        <span class="meta-company">Super U</span>
-                        <span class="meta-date">Juil. - Août 2025</span>
-                    </p>
-                </div>
-            </div>
-            <p class="experience-description">
-                Job été : mise en rayon, gestion stock. Développement adaptabilité, 
-                travail en équipe.
-            </p>
-            <div class="experience-tags">
-                <span class="tag">Adaptabilité</span>
-                <span class="tag">Travail d'équipe</span>
-                <span class="tag">Gestion stress</span>
-            </div>
-        </article>
-
-        <!-- Animateur (social = orange) -->
-        <article class="experience-card experience-social">
-            <div class="experience-header">
-                <div class="experience-icon">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" stroke="currentColor" stroke-width="2"/>
-                    </svg>
-                </div>
-                <div>
-                    <h3>Animateur BAFA</h3>
-                    <p class="experience-meta">
-                        <span class="meta-company">Centre de loisirs</span>
-                        <span class="meta-date">Juil. - Août 2024</span>
-                    </p>
-                </div>
-            </div>
-            <p class="experience-description">
-                Animation activités enfants 6-12 ans : organisation projets collectifs, 
-                gestion groupe, communication. Compétences transférables au travail d'équipe 
-                en développement logiciel.
-            </p>
-            <div class="experience-tags">
-                <span class="tag">Coordination</span>
-                <span class="tag">Leadership</span>
-                <span class="tag">Communication</span>
-            </div>
-        </article>
-
-        <!-- Judo (sport = rouge) -->
-        <article class="experience-card experience-sport">
-            <div class="experience-header">
-                <div class="experience-icon">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" stroke="currentColor" stroke-width="2"/>
-                    </svg>
-                </div>
-                <div>
-                    <h3>Ceinture Noire Judo</h3>
-                    <p class="experience-meta">
-                        <span class="meta-company">14 ans de pratique</span>
-                        <span class="meta-date">2010-2024</span>
-                    </p>
-                </div>
-            </div>
-            <p class="experience-description">
-                14 ans de judo jusqu’à la ceinture noire m’ont appris à rester régulier,
-                 à accepter les échecs et à progresser pas à pas.
-                  C’est le même état d’esprit que j’applique au code : 
-                  je teste, je me trompe, je corrige, et j’avance.
-            </p>
-            <div class="experience-tags">
-                <span class="tag">Persévérance</span>
-                <span class="tag">Discipline</span>
-                <span class="tag">Progression</span>
-            </div>
-        </article>
-
-    </div>
-    </section>
-
-    <!-- Langues & Centres d'intérêt -->
-<section class="about-section-block">
-    <div class="about-two-columns-modern">
-        
-        <!-- Langues -->
-        <div class="about-column-card">
-            <div class="column-header">
-                <div class="header-icon">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" stroke="currentColor" stroke-width="2"/>
-                    </svg>
-                </div>
-                <h3>Langues</h3>
-            </div>
-            <ul class="modern-list">
-                <li class="modern-list-item">
-                    <div class="item-icon lang-en">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                            <path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2"/>
-                            <path d="M3.6 9h16.8M3.6 15h16.8M12 3c1.5 0 2.9 4 2.9 9s-1.4 9-2.9 9m0-18c-1.5 0-2.9 4-2.9 9s1.4 9 2.9 9" stroke="currentColor" stroke-width="2"/>
-                        </svg>
-                    </div>
-                    <div class="item-content">
-                        <span class="item-title">Anglais</span>
-                        <span class="item-level">B1 · Technique</span>
-                    </div>
-                </li>
-                <li class="modern-list-item">
-                    <div class="item-icon lang-es">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                            <path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2"/>
-                            <path d="M3.6 9h16.8M3.6 15h16.8M12 3c1.5 0 2.9 4 2.9 9s-1.4 9-2.9 9m0-18c-1.5 0-2.9 4-2.9 9s1.4 9 2.9 9" stroke="currentColor" stroke-width="2"/>
-                        </svg>
-                    </div>
-                    <div class="item-content">
-                        <span class="item-title">Espagnol</span>
-                        <span class="item-level">A2 · Scolaire</span>
-                    </div>
-                </li>
-            </ul>
-        </div>
-
-        <!-- Centres d'intérêt -->
-        <div class="about-column-card">
-            <div class="column-header">
-                <div class="header-icon">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2"/>
-                    </svg>
-                </div>
-                <h3>Centres d'intérêt</h3>
-            </div>
-            <ul class="modern-list">
-                <li class="modern-list-item">
-                    <div class="item-icon hobby-sport">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                            <path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" stroke="currentColor" stroke-width="2"/>
-                        </svg>
-                    </div>
-                    <span class="item-title">Judo (ceinture noire)</span>
-                </li>
-                <li class="modern-list-item">
-                    <div class="item-icon hobby-sport">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
-                            <path d="M8 12h8M12 8v8" stroke="currentColor" stroke-width="2"/>
-                        </svg>
-                    </div>
-                    <span class="item-title">Volley</span>
-                </li>
-                <li class="modern-list-item">
-                    <div class="item-icon hobby-gaming">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                            <path d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" stroke="currentColor" stroke-width="2"/>
-                        </svg>
-                    </div>
-                    <span class="item-title">Game Design Analysis</span>
-                </li>
-                <li class="modern-list-item">
-                    <div class="item-icon hobby-tech">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                            <path d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke="currentColor" stroke-width="2"/>
-                        </svg>
-                    </div>
-                    <span class="item-title">Intelligence Artificielle</span>
-                </li>
-                <li class="modern-list-item">
-                    <div class="item-icon hobby-outdoor">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                            <path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" stroke="currentColor" stroke-width="2"/>
-                        </svg>
-                    </div>
-                    <span class="item-title">Randonnée montagne</span>
-                </li>
-            </ul>
-        </div>
-
-    </div>
+        </li>
+    </ol>
 </section>
 
-    <!-- Contact -->
-    <section class="about-cta">
-        <div class="about-cta-content">
-            <h2>Me retrouver</h2>
-        <br>
-            <div class="about-cta-actions">
-                <a href="contact.html" class="btn btn-primary">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                        <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke="currentColor" stroke-width="2"/>
-                    </svg>
-                    Me contacter
-                </a>
-                <a href="https://www.linkedin.com/in/lucas-bieszczad/" target="_blank" rel="noopener" class="btn btn-primary">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                    </svg>
-                    LinkedIn
-                </a>
-                <a href="https://github.com/lucasbies" target="_blank" rel="noopener" class="btn btn-primary">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                    </svg>
-                    GitHub
-                </a>
+<section class="section" aria-labelledby="titre-experiences">
+    <div class="section-head">
+        <h2 id="titre-experiences">Expériences</h2>
+    </div>
+    <ol class="timeline" reversed>
+        <li>
+            <span class="timeline__date">2026 – 2027</span>
+            <div>
+                <h3>Alternance, développeur backend</h3>
+                <p class="timeline__place">Criteo, équipe CIAM (gestion des identités et des accès clients)</p>
+                <p>Alternance de BUT 3. Je travaille sur Authzilla.</p>
             </div>
+        </li>
+        <li>
+            <span class="timeline__date">2026, 3 mois</span>
+            <div>
+                <h3>Stage, développeur backend</h3>
+                <p class="timeline__place">Criteo, Paris, équipe NoSQL</p>
+                <p>
+                    Stage de BUT 2. Développement d'une API en Python pour le provisioning
+                    de buckets.
+                </p>
+            </div>
+        </li>
+        <li>
+            <span class="timeline__date">Janv. – avr. 2026</span>
+            <div>
+                <h3>Tutorat, aide à la réussite</h3>
+                <p class="timeline__place">IUT Clermont Auvergne</p>
+                <p>
+                    Accompagnement d'étudiants de BUT 1 en difficulté : révisions, organisation
+                    du travail, méthodologie. Un bon exercice pour expliquer simplement des notions techniques.
+                </p>
+            </div>
+        </li>
+        <li>
+            <span class="timeline__date">Juil. – août 2025</span>
+            <div>
+                <h3>Équipier polyvalent</h3>
+                <p class="timeline__place">Super U</p>
+                <p>Job d'été : mise en rayon et gestion des stocks, en équipe et sous pression.</p>
+            </div>
+        </li>
+        <li>
+            <span class="timeline__date">Juil. – août 2024</span>
+            <div>
+                <h3>Animateur BAFA</h3>
+                <p class="timeline__place">Centre de loisirs</p>
+                <p>Animation d'enfants de 3 à 13 ans : projets collectifs, gestion de groupe, communication.</p>
+            </div>
+        </li>
+        <li>
+            <span class="timeline__date">2010 – 2024</span>
+            <div>
+                <h3>Judo, ceinture noire</h3>
+                <p class="timeline__place">14 ans de pratique</p>
+                <p>
+                    Le judo m'a appris à rester régulier, à accepter l'échec et à progresser pas à pas.
+                    J'applique la même méthode au code : je teste, je me trompe, je corrige, j'avance.
+                </p>
+            </div>
+        </li>
+    </ol>
+</section>
+
+<section class="section" aria-label="Langues et centres d'intérêt">
+    <div class="two-col">
+        <div>
+            <h2>Langues</h2>
+            <dl class="defs">
+                <div><dt>Anglais</dt><dd>B1, lecture technique</dd></div>
+                <div><dt>Espagnol</dt><dd>A2, niveau scolaire</dd></div>
+            </dl>
         </div>
-    </section>
+        <div>
+            <h2>En dehors du code</h2>
+            <p class="muted">
+                Judo, volley, randonnée en montagne. Je m'intéresse aussi à l'analyse
+                de game design et à l'intelligence artificielle.
+            </p>
+        </div>
+    </div>
+</section>
 
 </main>
